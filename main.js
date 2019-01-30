@@ -80,7 +80,7 @@ MANAGE_EMOJIS *	0x40000000	Allows management and editing of emojis
    let args = messageArray.slice(1);
 
    let commandfile = bot.commands.get(cmd.slice(prefix.length));
-   if(commandfile) commandfile.run(bot,message,args, ops;
+   if(commandfile) commandfile.run(bot,message,args, ops);
 
  });
 
