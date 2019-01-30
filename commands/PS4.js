@@ -13,5 +13,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-    name: "PS4"
+    name: "ps4"
 }
