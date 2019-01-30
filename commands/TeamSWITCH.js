@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    if(message.channe.id == "540120684014206976"){
   let roleID = "540121715506806785";
   let role = message.guild.roles.find(r => r.name === "SWITCH");
   if(message.member.roles.has(roleID)) {
@@ -23,6 +24,7 @@ module.exports.run = async (bot, message, args) => {
 
     message.member.addRole(role).catch(console.error);
   }
+}
 }
 
 module.exports.help = {
