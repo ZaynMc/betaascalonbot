@@ -44,7 +44,7 @@ bot.on('guildMemberAdd', member => {
   let embed = new Discord.RichEmbed()
         .setColor('#33cc33')
         .setDescription(`Bienvenue ${member.user}, avant de te divertir sur ASCALON je t'invite à lire le règlement . Have Fun:tada::hugging: !`)
-        .setFooter('Nous sommes désormais ' + member.guild.memberCount)
+        .setFooter('Nous sommes désormais : ' + member.guild.memberCount)
     member.guild.channels.get('539553652960919563').send(embed);
 
     bot.channels.get("539553792560070668").setName(`Total Users : ${member.guild.memberCount}`); // total users
