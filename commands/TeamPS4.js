@@ -2,11 +2,11 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   let roleID = "540122138422804481";
-let role = message.guild.roles.find(r => r.name === "PS4");
-if(message.member.hasRole(role)) {
-message.member.removeRole(role).catch(console.error);
-return;
-}
+  if(message.member.roles.has(role.id)) {
+    console.log(`Yay, the author of the message has the role!`);
+  } else {
+    console.log(`Nope, noppers, nadda.`);
+  }
 }
 
 module.exports.help = {
