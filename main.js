@@ -159,5 +159,7 @@ const Discord = require("discord.js");
         db.delete(`support_${support.targetID}`);
         return;
           }
+        }
+      });
 
  bot.login(token);
