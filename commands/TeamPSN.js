@@ -14,5 +14,5 @@ message.member.addRole(role).catch(console.error);
 }
 
 module.exports.help = {
-  name: "PSN"
+  name: "ps"
 }
