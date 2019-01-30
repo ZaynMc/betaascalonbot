@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  if(message.channel.name == "📕rôles") {
   let roleID = "540121484690194432";
   let role = message.guild.roles.find(r => r.name === "XBOX");
   if(message.member.roles.has(roleID)) {
@@ -21,7 +22,8 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send(embed);
 
     message.member.addRole(role).catch(console.error);
-  
+
+}
 }
 }
 
