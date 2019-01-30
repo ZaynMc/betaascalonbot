@@ -29,5 +29,5 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
   name: "PS4",
-  alias: "ps4"
+  alias: ["ps4", "psn"]
 }
