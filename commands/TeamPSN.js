@@ -11,8 +11,6 @@ return;
 message.member.addRole(role).catch(console.error);
 }
 
-}
-
 module.exports.help = {
-  name: "report"
+  name: "PS4"
 }
