@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
   if(message.member.roles.has(roleID)) {
     console.log(`Yay, the author of the message has the role!`);
 
-    
+
           var embed = new Discord.RichEmbed()
-        .setDescription(`${message.member.user} a rejoint la team` + role);
+        .setDescription(`${message.member.user} a rejoint la team ` + role);
 
         message.channel.send(embed);
 
@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     console.log(`Nope, noppers, nadda.`);
 
     var embed = new Discord.RichEmbed()
-    .setDescription(`${message.member.user} a quitter la team` + role);
+    .setDescription(`${message.member.user} a quitter la team ` + role);
 
     message.channel.send(embed);
 
