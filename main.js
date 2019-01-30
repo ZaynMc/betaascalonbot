@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
-bots.aliases = new Discor.Collection();
+bot.aliases = new Discord.Collection();
 const token = process.env.token;
 
 fs.readdir("./commands/", (err, files) => {
