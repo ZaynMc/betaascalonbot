@@ -40,4 +40,12 @@ bot.on("message", async message => {
   if(commandfile) commandfile.run(bot,message,args);
 });
 
+bot.on('guildMemberAdd', member => {
+    bot.channels.get("539553792560070668").setName(`Total Users : ${member.guild.memberCount}`); // total users
+});
+
+bot.on('guildMemberRemove', member => {
+    bot.channels.get("539553792560070668").setName(`Total Users : ${member.guild.memberCount}`); // total users
+});
+
   bot.login(token);
