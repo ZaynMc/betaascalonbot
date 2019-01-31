@@ -120,7 +120,6 @@ bot.on("ready", async () => {
 
 
   //setInterval(changeColor, 1);
-});
 
 bot.on("message", async message => {
   if(message.author.bot) return;
