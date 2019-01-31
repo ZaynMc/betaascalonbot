@@ -61,6 +61,8 @@ const b = message.guild.roles.get('540278913230700584'); //BattleRoyale
 
 bot.on("ready", async () => {
 
+    console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+
   var channel = bot.channels.get('540546804769357831');
   //channel.sendMessage("Hello world");
    const filter = (reaction, user) => ['🔨', '🏹'].includes(reaction.emoji.name);
@@ -118,10 +120,6 @@ bot.on("ready", async () => {
 
 
   //setInterval(changeColor, 1);
-
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-
-
 });
 
 bot.on("message", async message => {
