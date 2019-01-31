@@ -63,26 +63,26 @@ exports.run = async (client, message, args) => {
 
 
            case '🔨':
-           let roleID = "540477037094240257"; //
-           let role = message.guild.roles.find(r => r.name === "Mode Créatif");
-           if(message.member.roles.has(roleID)) {
+           let roleID2 = "540477037094240257"; //
+           let role2 = message.guild.roles.find(r => r.name === "Mode Créatif");
+           if(message.member.roles.has(roleID2)) {
              console.log(`Yay, the author of the message has the role!`);
 
                    var embed = new Discord.RichEmbed()
-                 .setDescription(`${message.member.user} a quitter la team ` + role);
+                 .setDescription(`${message.member.user} a quitter la team ` + role2);
 
                  message.channel.send(embed);
 
-             message.member.removeRole(role).catch(console.error);
+             message.member.removeRole(role2).catch(console.error);
            } else {
              console.log(`Nope, noppers, nadda.`);
 
              var embed = new Discord.RichEmbed()
-             .setDescription(`${message.member.user} a rejoint la team ` + role);
+             .setDescription(`${message.member.user} a rejoint la team ` + role2);
 
              message.channel.send(embed);
 
-             message.member.addRole(role).catch(console.error);
+             message.member.addRole(role2).catch(console.error);
          }
           // message.channel.send('Rôle add');
 
