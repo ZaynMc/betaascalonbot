@@ -114,7 +114,7 @@ bot.on("ready", async () => {
                 });
                      });
                  });
-             };
+             }
 
 
   //setInterval(changeColor, 1);
