@@ -11,8 +11,8 @@ module.exports.run = async (bot, message, args) => {
 
   var embed = new Discord.RichEmbed()
   .setTitle(`📣 Game Snipe - Décompte 📣 [${modRole}]`)
-  .setDescription("Démarrage de la game dans une 1 minute")
-  .setFooter("□□□□□□□□□□ - 0 %")
+  .setDescription(`Démarrage de la game dans une 1 minute`)
+  .setFooter(`□□□□□□□□□□ - 0 %`)
 
   message.channel.send(embed);
 

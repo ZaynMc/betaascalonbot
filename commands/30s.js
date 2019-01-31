@@ -6,13 +6,13 @@ module.exports.run = async (bot, message, args) => {
       return;
   }
 
-  modRole = message.guild.roles.find('name', 'Snipe Annonce');
+  let modRole = message.guild.roles.find('name', 'Snipe Annonce');
   const messageSnipe = message.member.guild.channels.find('name', '📣snipe-annonces📣');
 
   var embed = new Discord.RichEmbed()
   .setTitle(`📣 Game Snipe - Décompte 📣 [${modRole}]`)
-  .setDescription("Démarrage de la game dans une 1 minute")
-  .setFooter("■■■■■□□□□□ - 50 %")
+  .setDescription(`Démarrage de la game dans une 1 minute`)
+  .setFooter(`■■■■■□□□□□ - 50 %`)
 
   message.channel.send(embed);
 
