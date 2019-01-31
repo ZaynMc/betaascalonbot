@@ -1,10 +1,10 @@
 const {RichEmbed} = require ('discord.js');
 exports.run = async (client, message, args) => {
-     wait message.delete (). catch (O_o => {});
-    const a = message.guild.roles.get ('499257961881927691'); // Marrom
-     const b = message.guild.roles.get ('526261790733238272'); // Laranja
-     const filter = (reaction) => ['🏺', '🏀']. Includes (reaction.emoji.name);
-    const embed = new RichEmbed ()
+      message.delete ().catch(O_o => {});
+    const a = message.guild.roles.get('499257961881927691'); // Marrom
+     const b = message.guild.roles.get('526261790733238272'); // Laranja
+     const filter = (reaction) => ['🏺', '🏀'].includes(reaction.emoji.name);
+    const embed = new RichEmbed()
         .setTitle ('Escolha seu cargo!')
         .setDescription (`
         🏺 $ {a.toString ()}
@@ -13,28 +13,28 @@ exports.run = async (client, message, args) => {
         .setColor (0xdd9323)
         .setFooter (` ID: $ {message.`);
 
-    message.channel.send (embed).then (async msg => {
+    message.channel.send(embed).then(async msg => {
 
 
-        wait msg.react ('🏺');
+        msg.react('🏺');
 
-        wait msg.react ('🏀');
+        msg.react('🏀');
 
 
 
        msg.awaitReactions(filter,).then(recueilli => {
 
 
-            const réaction = recueilli.first ();
+            const réaction = recueilli.first();
 
 
-            commutateur (reaction.emoji.name) {
+            switch (reaction.emoji.name) {
 
-                cas '🏺': message.member.addRole(a).catch (err => {
+                cas '🏺': message.member.addRole(a).catch(err => {
 
-                        console.log (err);
+                        console.log(err);
 
-                        retour message.channel. send (`Algo de errado não está certo. Nao conseille une cargaison: ** $ {err.message} **.`);
+                        return;
 
                     });
 
@@ -43,8 +43,8 @@ exports.run = async (client, message, args) => {
                      break;
 
                 case '🏀': message.member.addRole(b).catch (err => {
-                           console.log (err);
-                        return message.channel.send (`Quelque chose ne va pas n'est pas correct. Je ne pouvais pas appliquer cette charge: ** $ {err.message} **.`);
+                           console.log(err);
+                        return;
                     });
 
 
