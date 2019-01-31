@@ -7,11 +7,10 @@ exports.run = async (client, message, args) => {
     const embed = new RichEmbed()
         .setTitle ('Escolha seu cargo!')
         .setDescription (`
-        🏺 $ {a.toString ()}
-        $ {b.toString ()}
+        🏺 ${a.toString ()}
+        $ ${b.toString ()}
         `)
         .setColor (0xdd9323)
-        .setFooter (` ID: $ {message.`);
 
     message.channel.send(embed).then(async msg => {
 
@@ -25,7 +24,7 @@ exports.run = async (client, message, args) => {
        msg.awaitReactions(filter,).then(recueilli => {
 
 
-            const réaction = recueilli.first();
+            const reaction = recueilli.first();
 
 
             switch (reaction.emoji.name) {
@@ -58,6 +57,6 @@ exports.run = async (client, message, args) => {
         });
     });
 };
-exports.help = {
-     name: 'charges'
+module.exports.help = {
+     name: 'roles'
  };﻿
