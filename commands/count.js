@@ -2,6 +2,10 @@ const ytdl = require('ytdl-core');
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+      message.delete();
+      return;
+  }
 
   const streamOptions = {seek : 0, volume : 1};
   let voiceChannelID = "540549319212793866";
