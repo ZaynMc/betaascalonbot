@@ -50,6 +50,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "spawn",
-  alias: ["drop", "dro"]
+  name: "roles"
 }
