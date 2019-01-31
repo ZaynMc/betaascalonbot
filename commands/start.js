@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
       message.delete();
       return;
   }
-  modRole = msg.channel.server.roles.mention('name', 'Snipe Annonce');
+  modRole = message.channel.server.roles.mention('name', 'Snipe Annonce');
   const messageSnipe = message.member.guild.channels.find('name', '📣snipe-annonces📣');
     messageSnipe.send(`📣 ANNONCE SNIPE 📣 [${modRole.mention()}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nRejoignez le channel : count\n \n Commence dans 5 minutes...`);
 
