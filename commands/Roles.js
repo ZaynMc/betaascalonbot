@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
        await msg.react("🔨");
 
        msg.awaitReactions(filter, {
-         max: 1,
+         max: 3,
          time: 30000,
          errors: ['time']
 
