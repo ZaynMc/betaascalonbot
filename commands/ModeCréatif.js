@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
     if(message.channel.name == "📕rôles") {
-  let roleID = "540278913230700584";
-  let role = message.guild.roles.find(r => r.name === "Battle Royale");
+  let roleID = "540477037094240257"; //
+  let role = message.guild.roles.find(r => r.name === "Mode Créatif");
   if(message.member.roles.has(roleID)) {
     console.log(`Yay, the author of the message has the role!`);
 
@@ -27,5 +27,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "BattleRoyale"
+  name: "Créatif"
 }
