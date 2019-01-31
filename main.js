@@ -55,10 +55,6 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-const a = message.guild.roles.get('540477037094240257'); //Creatif
-const b = message.guild.roles.get('540278913230700584'); //BattleRoyale
-
-
 bot.on("ready", async () => {
 
     console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
