@@ -3,7 +3,7 @@ exports.run = async (client, message, args) => {
       message.delete ().catch(O_o => {});
     const a = message.guild.roles.get('540278913230700584');
      const b = message.guild.roles.get('540477037094240257');
-     const b = message.guild.roles.get('540582229169012746');
+     const c = message.guild.roles.get('540582229169012746');
      const filter = (reaction) => ['📣', '🏹', '🔨'].includes(reaction.emoji.name);
 
      const embed = new Discord.RichEmbed()
