@@ -111,7 +111,7 @@ bot.on("ready", async () => {
                   }
                 }).catch(collected => {
                   return message.channel.send('Veuillez contactez Zayn.');
-                }
+                });
                      });
                  });
              };
