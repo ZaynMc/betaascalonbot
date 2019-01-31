@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  message.channel.send("zegmkergmk");
     if(message.channel.name == "🌎random-spawn🌎") {
       number = 19;
       var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
@@ -15,7 +16,6 @@ module.exports.run = async (bot, message, args) => {
         case 8 : message.channel.send(`${message.message.user} Votre spawn : **Polar Peak**`);
         case 9 : message.channel.send(`${message.message.user} Votre spawn : **Frosty Flights**`);
         case 10 : message.channel.send(`${message.message.user} Votre spawn : **Happy Hamlet**`);
-
         case 11 : message.channel.send(`${message.message.user} Votre spawn : **Lucky Landing**`);
         case 12 : message.channel.send(`${message.message.user} Votre spawn : **Fatal Fields**`);
         case 13 : message.channel.send(`${message.message.user} Votre spawn : **Paradise Palms**`);
