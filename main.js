@@ -108,13 +108,14 @@ bot.on("ready", async () => {
 
                     break;
 
-            }
-        });
-      }).catch(collected => {
-        return message.channel.send('Veuillez contactez Zayn.');
+                  }
+                }).catch(collected => {
+                  return message.channel.send('Veuillez contactez Zayn.');
 
-      });
-    }
+                });
+
+              });
+              }
 
 
   //setInterval(changeColor, 1);
