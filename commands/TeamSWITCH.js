@@ -29,6 +29,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "SWITCH",
-  alias: ["switch", "swit"]
+  name: "SWITCH"
 }
