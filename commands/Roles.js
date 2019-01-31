@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
 
             switch (reaction.emoji.name) {
 
-                cas '🏺': message.member.addRole(a).catch(err => {
+                case '🏺': message.member.addRole(a).catch(err => {
 
                         console.log(err);
 
