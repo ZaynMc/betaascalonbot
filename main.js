@@ -22,7 +22,7 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
     props.help.aliases.forEach(alias => {
-      bot.aliases.set(alias, props.help.name;)
+      bot.aliases.set(alias, props.help.name);
     });
 
   });
