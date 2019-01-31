@@ -63,15 +63,11 @@ bot.on("ready", async () => {
 
     console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
-
-
-
-
   //setInterval(changeColor, 1);
 
 }
 bot.on("message", async message => {
-  if(message.author.bot) return;
+  //if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
   let prefix = "a!";
