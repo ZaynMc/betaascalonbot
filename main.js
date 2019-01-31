@@ -63,64 +63,13 @@ bot.on("ready", async () => {
 
     console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
-  var channel = bot.channels.get('540546804769357831');
-  //channel.sendMessage("Hello world");
-   const filter = (reaction, user) => ['🔨', '🏹'].includes(reaction.emoji.name);
 
-   const embed = new RichEmbed()
-      .setTitle('Rôles Disponibles')
-      .setDescription(`
-
-      🔨 ${a.toString()}
-      🏹 ${b.toString()}
-
-      `)
-      .setColor(0xdd9323);
-
-      channel.send(embed).then(async msg => {
-
-        await msg.react('🔨');
-        await msg.react('🏹');
-
-        msg.awaitReactions(filter, {
-            max: 1,
-        }).then(collected => {
-
-            const reaction = collected.first();
-
-            switch (reaction.emoji.name) {
-                case '🔨':
-                if (message.member.roles.has(a.id)) {
-                return message.member.removeRole(a.id).catch(console.error);
-                }
-                    message.member.addRole(a).catch(err => {
-                        console.log(err);
-                    });
-                    message.channel.send(`CLAP`).then(m => m.delete(3000));
-
-                     break;
-                case '🏹':
-                if (message.member.roles.has(b.id)) {
-                return message.member.removeRole(b.id).catch(console.error);
-                }
-                    message.member.addRole(b).catch(err => {
-                           console.log(err);
-                    });
-                    message.channel.send(`CLAP`).then(m => m.delete(3000));
-
-                    break;
-
-                  }
-                }).catch(collected => {
-                  return message.channel.send('Veuillez contactez Zayn.');
-                });
-                     });
-                 });
 
 
 
   //setInterval(changeColor, 1);
 
+}
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
