@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 exports.run = async (client, message, args) => {
-      message.delete ().catch(O_o => {});
+    /*  message.delete ().catch(O_o => {});
     const a = message.guild.roles.get('540278913230700584');
      const b = message.guild.roles.get('540477037094240257');
      const c = message.guild.roles.get('540582229169012746');
@@ -94,7 +94,7 @@ exports.run = async (client, message, args) => {
 
        });
 
-       });
+     });*/
      }
 module.exports.help = {
      name: 'roles'
