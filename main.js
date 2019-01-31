@@ -2,7 +2,9 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+
 bot.commands = new Discord.Collection();
+bot.aliases = new Discord.Collection();
 const token = process.env.token;
 
 fs.readdir("./commands/", (err, files) => {
@@ -19,6 +21,10 @@ fs.readdir("./commands/", (err, files) => {
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
+    props.help.aliases.forEach(alias => {
+      bot.aliases.set(alias, props.help.name;)
+    });
+
   });
 
 });
@@ -37,8 +43,12 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  let commandfile = bot.commands.get(cmd.slice(prefix.length));
-  if(commandfile) commandfile.run(bot,message,args);
+  if(bot.commands.has(cmd)) {
+    commandfile = bot.commands.get(cmd.slice(prefix.length));
+  } else {
+    commandfile = bot.commands.get(bot.aliases.get(cmd));
+  }
+  commandfile.run(bot,message,args);
 });
 
 bot.on('guildMemberAdd', member => {
