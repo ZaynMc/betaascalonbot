@@ -48,13 +48,13 @@ exports.run = async (client, message, args) => {
                     });
 
 
-                    break;
+                    return;
             }
 
 
           }).catch (recueilli => {
 
-            retour message.channel.send ("Je ne peux pas vous obtenir ce message: /") then (m => m.delete (3000));
+            return message.channel.send ("Je ne peux pas vous obtenir ce message: /").then(m => m.delete (3000));
         });
     });
 };
