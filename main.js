@@ -6,7 +6,7 @@ const bot = new Discord.Client({disableEveryone: true});
 const token = process.env.token;
 
 // Load commands
-bot.commands = new discord.Collection();
+bot.commands = new Discord.Collection();
 fs.readdir("./commands/", (err, files) => {
   if (err) console.error(err);
   let jsfiles = files.filter(f => f.split(".").pop() === "js");
