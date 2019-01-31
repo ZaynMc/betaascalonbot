@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
-  
+
 });
 
 bot.on("message", async message => {
@@ -36,13 +36,8 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
-
-  if(bot.commands.has(cmd)) {
-    commandfile = bot.commands.get(cmd.slice(prefix.length));
-  } else {
-    commandfile = bot.commands.get(bot.aliases.get(cmd));
-  }
-  commandfile.run(bot,message,args);
+  commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
 });
 
 bot.on('guildMemberAdd', member => {
