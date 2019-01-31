@@ -16,8 +16,6 @@ module.exports.run = async (bot, message, args) => {
 
   message.channel.send(embed);
 
-  messageSnipe.send(embed);
-
 }
 
 module.exports.help = {
