@@ -25,7 +25,7 @@ exports.run = async (client, message, args) => {
        await msg.react("🔨");
 
        msg.awaitReactions(filter, {
-         max: 3,
+         max: 1,
          time: 30000,
          errors: ['time']
 
@@ -38,6 +38,7 @@ exports.run = async (client, message, args) => {
            //message.channel.send('Rôle add');
 
            case '🏹':
+           msg.delete();
            let roleID = "540278913230700584";
            let role = message.guild.roles.find(r => r.name === "Battle Royale");
            if(message.member.roles.has(roleID)) {
@@ -63,6 +64,7 @@ exports.run = async (client, message, args) => {
 
 
            case '🔨':
+            msg.delete();
            let roleID2 = "540477037094240257"; //
            let role2 = message.guild.roles.find(r => r.name === "Mode Créatif");
            if(message.member.roles.has(roleID2)) {
