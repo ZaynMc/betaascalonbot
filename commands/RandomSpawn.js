@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-  message.channel.send("zegmkergmk");
     if(message.channel.name == "🌎random-spawn🌎") {
       number = 19;
       var random = Math.floor (Math.random() * (number - 1 + 1)) + 1;
