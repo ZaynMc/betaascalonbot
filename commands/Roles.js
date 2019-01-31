@@ -1,8 +1,8 @@
 const {RichEmbed} = require ('discord.js');
 exports.run = async (client, message, args) => {
       message.delete ().catch(O_o => {});
-    const a = message.guild.roles.get('499257961881927691'); // Marrom
-     const b = message.guild.roles.get('526261790733238272'); // Laranja
+    const a = message.guild.roles.get('540582229169012746'); // Marrom
+     const b = message.guild.roles.get('540477037094240257'); // Laranja
      const filter = (reaction) => ['🏺', '🏀'].includes(reaction.emoji.name);
     const embed = new RichEmbed()
         .setTitle ('Escolha seu cargo!')
