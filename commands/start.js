@@ -8,9 +8,8 @@ module.exports.run = async (bot, message, args) => {
   }
   modRole = message.guild.roles.find('name', 'Snipe Annonce');
   const messageSnipe = message.member.guild.channels.find('name', '📣snipe-annonces📣');
-    messageSnipe.send(`📣 ANNONCE SNIPE 📣 [${modRole}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nRejoignez le channel : count\n \n Commence dans 5 minutes...`);
 
-
+  messageSnipe.send(`📣 ANNONCE SNIPE 📣 [${modRole}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nRejoignez le channel : 📞 VOCAL SNIPE 📞\n \n Commence dans 5 minutes...`);
 }
 
 module.exports.help = {
