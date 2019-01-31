@@ -1,4 +1,4 @@
-const {RichEmbed} = require ('discord.js');
+const Discord = require("discord.js");
 exports.run = async (client, message, args) => {
       message.delete ().catch(O_o => {});
     const a = message.guild.roles.get('540278913230700584');
