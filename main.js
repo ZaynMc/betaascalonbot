@@ -37,12 +37,8 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
-  if(bot.commands.has(cmd)) {
     commandfile = bot.commands.get(cmd.slice(prefix.length));
-  } else {
-    commandfile = bot.commands.get(bot.aliases.get(cmd));
-  }
-  commandfile.run(bot,message,args);
+  if(commandfile) commandfile.run(bot,message,args);
 });
 
 bot.on('guildMemberAdd', member => {
