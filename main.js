@@ -28,7 +28,7 @@ let place = 0;
 
 
 function changeColor() {
-  for (let index = 0; index < servers.length; ++index) {
+  for (let index = 0; index < 1; ++index) {
     bot.guilds.get("539552660806696988").roles.find('name', "Raimbow").setColor(rainbow[place])
 		.catch(console.error);
     if(place == (size - 1)){
