@@ -1,54 +1,63 @@
-const Discord = require("discord.js");
+const {RichEmbed} = require ('discord.js');
+exports.run = async (client, message, args) => {
+     wait message.delete (). catch (O_o => {});
+    const a = message.guild.roles.get ('499257961881927691'); // Marrom
+     const b = message.guild.roles.get ('526261790733238272'); // Laranja
+     const filter = (reaction) => ['🏺', '🏀']. Includes (reaction.emoji.name);
+    const embed = new RichEmbed ()
+        .setTitle ('Escolha seu cargo!')
+        .setDescription (`
+        🏺 $ {a.toString ()}
+        $ {b.toString ()}
+        `)
+        .setColor (0xdd9323)
+        .setFooter (` ID: $ {message.`);
 
-module.exports.run = async (bot, message, args) => {
-    message.delete();
+    message.channel.send (embed).then (async msg => {
 
-    const a = message.guild.roles.get("540278913230700584");
-    const b = message.guild.roles.get("540477037094240257");
-    const c = message.guild.roles.get("540582229169012746");
 
-    const filtrer = (reaction, user) => ['🔊', '🔨', '🏹'].includes(reaction.emoji.name) && user.id == message.author.id;
+        wait msg.react ('🏺');
 
-    const embed = new Discord.RichEmbed()
-    .setTitle('Rôle Disponibles')
-    .setDescription(`
+        wait msg.react ('🏀');
 
-      🔊 ${a.toString()}
-      🔨 ${b.toString()}
-      🏹 ${c.toString()}
 
-      `)
-      .setColor(0xdd9323)
 
-      message.channel.send(embed).then(async msg => {
+       msg.awaitReactions(filter,).then(recueilli => {
 
-        message.react("🔊");
-        message.react("🔨");
-        message.react("🏹");
 
-        message.awaitReaction(filter, {
-          max: 100,
-          time: 9999999999,
-          errors: ['time']
+            const réaction = recueilli.first ();
 
-        }).then(collected => {
-          const reaction = collected.first();
 
-          switch(reaction.emoji.name) {
-            case '🔊':
-            message.member.addRole(a);
-            break;
-            case '🔨':
-              message.member.addRole(b);
-            break;
-            case '🏹':
-              message.member.addRole(c);
-            break;
-          }
-        })
-      })
-}
+            commutateur (reaction.emoji.name) {
 
-module.exports.help = {
-  name: "roles"
-}
+                cas '🏺': message.member.addRole(a).catch (err => {
+
+                        console.log (err);
+
+                        retour message.channel. send (`Algo de errado não está certo. Nao conseille une cargaison: ** $ {err.message} **.`);
+
+                    });
+
+
+
+                     break;
+
+                case '🏀': message.member.addRole(b).catch (err => {
+                           console.log (err);
+                        return message.channel.send (`Quelque chose ne va pas n'est pas correct. Je ne pouvais pas appliquer cette charge: ** $ {err.message} **.`);
+                    });
+
+
+                    break;
+            }
+
+
+          }).catch (recueilli => {
+
+            retour message.channel.send ("Je ne peux pas vous obtenir ce message: /") then (m => m.delete (3000));
+        });
+    });
+};
+exports.help = {
+     name: 'charges'
+ };﻿
