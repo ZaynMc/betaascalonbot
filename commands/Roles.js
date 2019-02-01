@@ -31,13 +31,13 @@ exports.run = async (client, message, args) => {
      .setColor(0xdd9323)
 
      message.channel.send(embed).then(msg => {
-       await msg.react(xbox.id);
-       await msg.react(ps4.id);
-       await msg.react(sw.id);
-       await msg.react(pc.id);
-       await msg.react(mobile.id);
-       await msg.react("🏹");
-       await msg.react("🔨");
+      msg.react(xbox.id);
+      msg.react(ps4.id);
+      msg.react(sw.id);
+      msg.react(pc.id);
+      msg.react(mobile.id);
+      msg.react("🏹");
+      msg.react("🔨");
      });
 
      }
