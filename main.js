@@ -95,7 +95,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
          if(reaction.message.channel.name == "📕rôles"){
            console.log('a reaction has been added');
-           
+
            if(reaction.emoji.name == "ps4"){
              console.log('ps4 ' + user.username);
              let roleID = "540121221971443714";
