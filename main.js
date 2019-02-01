@@ -138,6 +138,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
         }
       }
     }
+}
 });
 
 bot.on('messageReactionRemove', (reaction, user) => {
