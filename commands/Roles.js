@@ -27,12 +27,13 @@ exports.run = async (client, message, args) => {
      )
      .setColor(0xdd9323)
 
-     message.channel.send(embed).then(function (message) {
-          message.react("https://cdn.discordapp.com/emojis/540819215674769408.png?v=1")
-          message.react("👎")
-       		message.pin()
-          message.delete()
-    			});
+     message.channel.send(embed).then(msg => {
+       msg.react(message.guild.emojis.get('540891274455154708'));
+      msg.react(message.guild.emojis.get('540891274455154708'));
+      msg.react(message.guild.emojis.get('540891274455154708'));
+      msg.react(message.guild.emojis.get('540891274455154708'));
+      msg.react(message.guild.emojis.get('540891274455154708'));
+     });
 
      }
 module.exports.help = {
