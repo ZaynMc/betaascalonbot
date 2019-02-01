@@ -7,21 +7,33 @@ exports.run = async (client, message, args) => {
      const d  = message.guild.roles.get('540121554374361099');
      const e = message.guild.roles.get('540121685064417280');
 
+     const xbox = client.emojis.find(emoji => emoji.name === "xbox");
+     const ps4 = client.emojis.find(emoji => emoji.name === "ps4");
+     const switch = client.emojis.find(emoji => emoji.name === "switch");
+     const pc = client.emojis.find(emoji => emoji.name === "pc");
+     const mobile = client.emojis.find(emoji => emoji.name === "mobile");
+
      const embed = new Discord.RichEmbed()
      .setTitle('Rôles Disponibles')
      .setDescription(`
 
-       :xbox: ${a.toString()}
-       :ps4: ${b.toString()}
-       :switch: ${c.toString()}
-       :pc: ${d.toString()}
-       :mobile: ${e.toString()}
+       ${xbox} ${a.toString()}
+       ${ps4} ${b.toString()}
+       ${switch} ${c.toString()}
+       ${pc} ${d.toString()}
+       ${mobile} ${e.toString()}
 
      `
      )
      .setColor(0xdd9323)
 
-     message.channel.send(embed);
+     message.channel.send(embed).then(msg => {
+       msg.react('xbox');
+        msg.react('ps4');
+         msg.react('switch');
+          msg.react('pc');
+           msg.react('mobile');
+     });
 
      }
 module.exports.help = {
