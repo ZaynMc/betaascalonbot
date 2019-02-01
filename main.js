@@ -92,6 +92,9 @@ bot.on('guildMemberRemove', member => {
 bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.message.channel.name == "📕rôles"){
       console.log('a reaction has been added');
+      if(reaction.emoji.name == "xbox"){
+        console.log('xbox');
+      }
     }
 });
 
