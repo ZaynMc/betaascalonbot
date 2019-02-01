@@ -108,90 +108,84 @@ bot.on('messageReactionAdd', (reaction, user) => {
              }
 
          }
-         
+
          //FOR ROLE
          if(reaction.message.channel.name == "📕rôles"){
 
            switch(reaction.emoji.name) {
              case "xbox":
              console.log('xbox ' + user.username);
-             let roleID = "540121484690194432";
-             let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
+             let role1 = reaction.message.guild.roles.find(r => r.name === "XBOX");
              let users = bot.users.find("username", user.username);
              let id = users.id;
 
              let member = reaction.message.member.guild.members.get(id);
-             member.addRole(role);
+             member.addRole(role1);
              break;
 
              case "ps4":
-             let roleID = "540121221971443714";
-             let role = reaction.message.guild.roles.find(r => r.name === "PS4");
+             let role2 = reaction.message.guild.roles.find(r => r.name === "PS4");
                console.log(`Nope, noppers, nadda.`);
                let users = bot.users.find("username", user.username);
                let id = users.id;
 
                let member = reaction.message.member.guild.members.get(id);
-               member.addRole(role);
+               member.addRole(role2);
              break;
 
              case "switch":
-             let roleID = "540121715506806785";
-             let role = reaction.message.guild.roles.find(r => r.name === "SWITCH");
+              let role3 = reaction.message.guild.roles.find(r => r.name === "SWITCH");
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                let users = bot.users.find("username", user.username);
                //once you've found the user you can get the id (or you can write .id after the find method)
                let id = users.id;
                let member = reaction.message.member.guild.members.get(id);
-               member.addRole(role);
+               member.addRole(role3);
              break;
 
              case "pc":
-             let roleID = "540121554374361099";
-             let role = reaction.message.guild.roles.find(r => r.name === "PC");
+             let role4 = reaction.message.guild.roles.find(r => r.name === "PC");
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                let users = bot.users.find("username", user.username);
                //once you've found the user you can get the id (or you can write .id after the find method)
                let id = users.id;
                let member = reaction.message.member.guild.members.get(id);
-               member.addRole(role);
+               member.addRole(role4);
              break;
 
              case "mobile":
-             let roleID = "540121685064417280";
-             let role = reaction.message.guild.roles.find(r => r.name === "Mobile");
+             let role5 = reaction.message.guild.roles.find(r => r.name === "Mobile");
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                let users = bot.users.find("username", user.username);
                //once you've found the user you can get the id (or you can write .id after the find method)
                let id = users.id;
                let member = reaction.message.member.guild.members.get(id);
-               member.addRole(role);
+               member.addRole(role5);
 
                case "🔨":
-               let roleID = "541003784281915392";
-               let role = reaction.message.guild.roles.find(r => r.name === "Mode Créatif");
+               let role6 = reaction.message.guild.roles.find(r => r.name === "Mode Créatif");
                  console.log(`Nope, noppers, nadda.`);
                  //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                  let users = bot.users.find("username", user.username);
                  //once you've found the user you can get the id (or you can write .id after the find method)
                  let id = users.id;
                  let member = reaction.message.member.guild.members.get(id);
-                 member.addRole(role);
+                 member.addRole(role6);
                break;
 
                case : "🏹":
-               let roleID = "541004019909525582";
-               let role = reaction.message.guild.roles.find(r => r.name === "Battle Royale");
+
+               let role7 = reaction.message.guild.roles.find(r => r.name === "Battle Royale");
                  console.log(`Nope, noppers, nadda.`);
                  //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                  let users = bot.users.find("username", user.username);
                  //once you've found the user you can get the id (or you can write .id after the find method)
                  let id = users.id;
                  let member = reaction.message.member.guild.members.get(id);
-                 member.addRole(role);
+                 member.addRole(role7);
                break;
 
                 }
