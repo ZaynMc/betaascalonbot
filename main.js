@@ -112,7 +112,7 @@ bot.on('messageReactionRemove', (reaction, user) => {
       console.log('xbox');
       let roleID = "540121484690194432";
       let role = user.client.message.guild.roles.find(r => r.name === "XBOX");
-      if(user.client.message.member.roles.has(roleID)) {
+      if(!reaction.message.member.roles.has(roleID)) {
         console.log(`Yay, the author of the message has the role!`);
         user.client.message.member.removeRole(role).catch(console.error);
       }
