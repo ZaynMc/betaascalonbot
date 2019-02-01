@@ -14,8 +14,6 @@ exports.run = async (client, message, args) => {
      const sw = client.emojis.find(emoji => emoji.name === "switch");
      const pc = client.emojis.find(emoji => emoji.name === "pc");
      const mobile = client.emojis.find(emoji => emoji.name === "mobile");
-     const battleroyale = client.emojis.find(emoji => emoji.name === "Battle Royale");
-     const creatif = client.emojis.find(emoji => emoji.name === "Mode Créatif");
 
      const embed = new Discord.RichEmbed()
      .setTitle('Rôles Disponibles')
@@ -25,21 +23,21 @@ exports.run = async (client, message, args) => {
        ${sw} ${c}
        ${pc} ${d}
        ${mobile} ${e}
-       ${battleroyale} ${f}
-       ${creatif} ${g}
+       🏹 ${f}
+       🔨 ${g}
 
      `
      )
      .setColor(0xdd9323)
 
      message.channel.send(embed).then(msg => {
-       msg.react(xbox.id);
-       msg.react(ps4.id);
-       msg.react(sw.id);
-       msg.react(pc.id);
-       msg.react(mobile.id);
-       msg.react("🏹");
-       msg.react("🔨");
+       await msg.react(xbox.id);
+       await msg.react(ps4.id);
+       await msg.react(sw.id);
+       await msg.react(pc.id);
+       await msg.react(mobile.id);
+       await msg.react("🏹");
+       await msg.react("🔨");
      });
 
      }
