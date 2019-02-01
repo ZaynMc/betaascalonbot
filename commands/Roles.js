@@ -3,7 +3,7 @@ exports.run = async (client, message, args) => {
      message.delete ().catch(O_o => {});
      const a = message.guild.roles.get('540121484690194432');
      const b = message.guild.roles.get('540121221971443714');
-     const c = message.guild.roles.get('540819216786259988');
+     const c = message.guild.roles.get('540121715506806785');
      const d  = message.guild.roles.get('540121554374361099');
      const e = message.guild.roles.get('540121685064417280');
 
