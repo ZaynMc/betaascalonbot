@@ -96,16 +96,16 @@ bot.on('messageReactionAdd', (reaction, user) => {
         console.log('xbox');
         let roleID = "540121484690194432";
         let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
-        if(!reaction.message.member.roles.has(roleID)) {{
+        if(reaction.message.member.roles.has(roleID)) {
           console.log(`Nope, noppers, nadda.`);
           reaction.message.member.addRole(role).catch(console.error);
         }
-      }
+    }
 
       if(reaction.emoji.name == "ps4") {
         let roleID = "540121221971443714";
         let role = reaction.message.guild.roles.find(r => r.name === "PS4");
-        if(!reaction.message.member.roles.has(roleID)) {
+        if(reaction.message.member.roles.has(roleID)) {
           console.log(`Nope, noppers, nadda.`);
           reaction.message.member.addRole(role).catch(console.error);
         }
@@ -114,7 +114,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
       if(reaction.emoji.name == "switch") {
         let roleID = "540121715506806785";
         let role = reaction.message.guild.roles.find(r => r.name === "SWITCH");
-        if(!reaction.message.member.roles.has(roleID)) {
+        if(reaction.message.member.roles.has(roleID)) {
           console.log(`Nope, noppers, nadda.`);
           reaction.message.member.addRole(role).catch(console.error);
         }
@@ -123,7 +123,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
       if(reaction.emoji.name == "pc") {
         let roleID = "540121554374361099";
         let role = reaction.message.guild.roles.find(r => r.name === "PC");
-        if(!reaction.message.member.roles.has(roleID)) {
+        if(reaction.message.member.roles.has(roleID)) {
           console.log(`Nope, noppers, nadda.`);
           reaction.message.member.addRole(role).catch(console.error);
         }
@@ -132,12 +132,12 @@ bot.on('messageReactionAdd', (reaction, user) => {
       if(reaction.emoji.name == "mobile") {
         let roleID = "540121685064417280";
         let role = reaction.message.guild.roles.find(r => r.name === "Mobile");
-        if(!reaction.message.member.roles.has(roleID)){
+        if(reaction.message.member.roles.has(roleID)){
           console.log(`Nope, noppers, nadda.`);
           reaction.message.member.addRole(role).catch(console.error);
         }
       }
-    }
+
 }
 });
 
