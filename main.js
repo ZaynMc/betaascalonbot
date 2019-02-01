@@ -106,7 +106,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
                let member = reaction.message.member.guild.members.get(id);
                member.addRole(role);
              }
-         
+
          }
 
          //FOR ROLE
