@@ -101,7 +101,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
              let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
              if(!reaction.message.member.roles.has(roleID)) {
                console.log(`Nope, noppers, nadda.`);
-               user.client.message.member.addRole('540121484690194432').catch(console.error);
+               user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
              }
          }
 
