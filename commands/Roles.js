@@ -28,7 +28,7 @@ exports.run = async (client, message, args) => {
      .setColor(0xdd9323)
 
      message.channel.send(embed).then(msg => {
-       msg.react(message.guild.emojis.get('540121484690194432'));
+       msg.react(xbox.id);
 
      });
 
