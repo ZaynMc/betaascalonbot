@@ -94,7 +94,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
        if (user.id !== bot.user.id) {
 
          if(reaction.message.channel.name == "📛règlement📛"){
-           if(reaction.emoji.name == "verif"){
+           if(reaction.emoji.name == "✅"){
              console.log('VERIFIED BY ASCALON BOT ' + user.username);
              let roleID = "541008951005806605";
              let role = reaction.message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
@@ -249,7 +249,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 bot.on('messageReactionRemove', (reaction, user) => {
 
   if(reaction.message.channel.name == "📛règlement📛"){
-    if(reaction.emoji.name == "verif"){
+    if(reaction.emoji.name == "✅"){
       console.log('VERIFIED BY ASCALON BOT ' + user.username);
       let roleID = "541008951005806605";
       let role = reaction.message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
