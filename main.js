@@ -93,6 +93,24 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
        if (user.id !== bot.user.id) {
 
+         if(reaction.message.channel.name == "📛règlement📛"){
+           if(reaction.emoji.name == "verif"){
+             console.log('VERIFIED BY ASCALON BOT ' + user.username);
+             let roleID = "541008951005806605";
+             let role = reaction.message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
+             if(!reaction.message.member.roles.has(roleID)) {
+               console.log(`Nope, noppers, nadda.`);
+               //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
+               let users = bot.users.find("username", user.username);
+               //once you've found the user you can get the id (or you can write .id after the find method)
+               let id = users.id;
+               let member = reaction.message.member.guild.members.get(id);
+               member.addRole(role);
+             }
+         }
+         }
+
+         //FOR ROLE
          if(reaction.message.channel.name == "📕rôles"){
            console.log('a reaction has been added' + reaction.emoji.name);
 
@@ -229,6 +247,23 @@ bot.on('messageReactionAdd', (reaction, user) => {
    });
 
 bot.on('messageReactionRemove', (reaction, user) => {
+
+  if(reaction.message.channel.name == "📛règlement📛"){
+    if(reaction.emoji.name == "verif"){
+      console.log('VERIFIED BY ASCALON BOT ' + user.username);
+      let roleID = "541008951005806605";
+      let role = reaction.message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
+        console.log(`Nope, noppers, nadda.`);
+        //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
+        let users = bot.users.find("username", user.username);
+        //once you've found the user you can get the id (or you can write .id after the find method)
+        let id = users.id;
+        let member = reaction.message.member.guild.members.get(id);
+        member.removeRole(role);
+
+  }
+  }
+
   if(reaction.message.channel.name == "📕rôles"){
     console.log('a reaction has been added');
 
