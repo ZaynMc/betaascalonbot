@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
 
      const xbox = client.emojis.find(emoji => emoji.name === "xbox");
      const ps4 = client.emojis.find(emoji => emoji.name === "ps4");
-     const switch = client.emojis.find(emoji => emoji.name === "switch");
+     const sw = client.emojis.find(emoji => emoji.name === "switch");
      const pc = client.emojis.find(emoji => emoji.name === "pc");
      const mobile = client.emojis.find(emoji => emoji.name === "mobile");
 
@@ -19,7 +19,7 @@ exports.run = async (client, message, args) => {
 
        ${xbox} ${a.toString()}
        ${ps4} ${b.toString()}
-       ${switch} ${c.toString()}
+       ${sw} ${c.toString()}
        ${pc} ${d.toString()}
        ${mobile} ${e.toString()}
 
