@@ -16,13 +16,11 @@ exports.run = async (client, message, args) => {
      const embed = new Discord.RichEmbed()
      .setTitle('Rôles Disponibles')
      .setDescription(`
-
-       ${xbox} ${a.toString()}
-       ${ps4} ${b.toString()}
-       ${sw} ${c.toString()}
-       ${pc} ${d.toString()}
-       ${mobile} ${e.toString()}
-
+       ${xbox} ${a}
+       ${ps4} ${b}
+       ${sw} ${c}
+       ${pc} ${d}
+       ${mobile} ${e}
      `
      )
      .setColor(0xdd9323)
