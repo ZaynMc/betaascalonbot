@@ -28,15 +28,12 @@ exports.run = async (client, message, args) => {
      .setColor(0xdd9323)
 
      message.channel.send(embed).then(msg => {
-       /*msg.react(message.guild.emojis.get('540891274455154708'));
-      msg.react(message.guild.emojis.get('540891274455154708'));
-      msg.react(message.guild.emojis.get('540891274455154708'));
-      msg.react(message.guild.emojis.get('540891274455154708'));
-      msg.react(message.guild.emojis.get('540891274455154708'));*/
+       msg.react(`${xbox}`);
+      msg.react(`${ps4}`);
+      msg.react(`${sw}`);
+      msg.react(`${pc}`);
+      msg.react(`${mobile}`);
 
-      message.react(message.guild.emojis.get('540891274455154708'))
-  .then(console.log)
-  .catch(console.error);
      });
 
      }
