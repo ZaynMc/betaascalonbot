@@ -111,10 +111,10 @@ bot.on('messageReactionRemove', (reaction, user) => {
     if(reaction.emoji.name == "xbox"){
       console.log('xbox');
       let roleID = "540121484690194432";
-      let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
-      if(reaction.message.member.roles.has(roleID)) {
+      let role = user.client.message.guild.roles.find(r => r.name === "XBOX");
+      if(user.client.message.member.roles.has(roleID)) {
         console.log(`Yay, the author of the message has the role!`);
-        reaction.message.member.removeRole(role).catch(console.error);
+        user.client.message.member.removeRole(role).catch(console.error);
       }
     }
 
