@@ -91,7 +91,7 @@ bot.on('guildMemberRemove', member => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
 
-       if (reaction.emoji.name === TonEmoji && user.id !== bot.user.id) {
+       if (reaction.emoji.name === "xbox" && user.id !== bot.user.id) {
 
          if(reaction.message.channel.name == "📕rôles"){
            console.log('a reaction has been added');
