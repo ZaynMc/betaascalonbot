@@ -88,4 +88,15 @@ bot.on('guildMemberRemove', member => {
     bot.channels.get("539553792560070668").setName(`Total Users : ${member.guild.memberCount}`); // total users
 });
 
+
+client.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.message.channel.name == "📕rôles"){
+      console.log('a reaction has been added');
+    }
+});
+
+client.on('messageReactionRemove', (reaction, user) => {
+
+});
+
   bot.login(token);
