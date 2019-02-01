@@ -89,13 +89,13 @@ bot.on('guildMemberRemove', member => {
 });
 
 
-client.on('messageReactionAdd', (reaction, user) => {
+bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.message.channel.name == "📕rôles"){
       console.log('a reaction has been added');
     }
 });
 
-client.on('messageReactionRemove', (reaction, user) => {
+bot.on('messageReactionRemove', (reaction, user) => {
 
 });
 
