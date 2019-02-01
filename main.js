@@ -94,7 +94,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
        if (reaction.emoji.name === "xbox" && user.id !== bot.user.id) {
 
          if(reaction.message.channel.name == "📕rôles"){
-           console.log('a reaction has been added');
+           console.log('a reaction has been added' + reaction.emoji.name);
 
            if(reaction.emoji.name == "ps4"){
              console.log('ps4 ' + user.username);
@@ -111,6 +111,22 @@ bot.on('messageReactionAdd', (reaction, user) => {
                member.addRole(role);
              }
          }
+
+          /* if(reaction.emoji.name == "xbox"){
+             console.log('xbox ' + user.username);
+             let roleID = "540121484690194432";
+             let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
+             if(!reaction.message.member.roles.has(roleID)) {
+               console.log(`Nope, noppers, nadda.`);
+               //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
+               let users = bot.users.find("username", user.username);
+               //once you've found the user you can get the id (or you can write .id after the find method)
+               let id = users.id;
+
+               let member = reaction.message.member.guild.members.get(id);
+               member.addRole(role);
+             }
+         }*/
        }
      }
    });
