@@ -29,7 +29,10 @@ exports.run = async (client, message, args) => {
 
      message.channel.send(embed).then(msg => {
        msg.react(xbox.id);
-
+       msg.react(ps4.id);
+       msg.react(sw.id);
+       msg.react(pc.id);
+       msg.react(mobile.id);
      });
 
      }
