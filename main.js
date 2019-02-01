@@ -90,19 +90,24 @@ bot.on('guildMemberRemove', member => {
 
 
 bot.on('messageReactionAdd', (reaction, user) => {
-    if(reaction.message.channel.name == "📕rôles"){
-      console.log('a reaction has been added');
-      if(reaction.emoji.name == "xbox"){
-        console.log('xbox' + user.username);
-        let roleID = "540121484690194432";
-        let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
-        if(!reaction.message.member.roles.has(roleID)) {
-          console.log(`Nope, noppers, nadda.`);
-          reaction.message.member.addRole(role).catch(console.error);
-        }
-    }
-  }
-});
+
+       if (reaction.emoji.name === TonEmoji && user.id !== bot.user.id) {
+
+         if(reaction.message.channel.name == "📕rôles"){
+           console.log('a reaction has been added');
+           if(reaction.emoji.name == "xbox"){
+             console.log('xbox' + user.username);
+             let roleID = "540121484690194432";
+             let role = reaction.message.guild.roles.find(r => r.name === "XBOX");
+             if(!reaction.message.member.roles.has(roleID)) {
+               console.log(`Nope, noppers, nadda.`);
+               reaction.message.member.addRole(role).catch(console.error);
+             }
+         }
+
+       }
+     }
+   });
 
 bot.on('messageReactionRemove', (reaction, user) => {
   if(reaction.message.channel.name == "📕rôles"){
