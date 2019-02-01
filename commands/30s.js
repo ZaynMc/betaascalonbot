@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
   const messageSnipe = message.member.guild.channels.find('name', '📣snipe-annonces📣');
 
   var embed = new Discord.RichEmbed()
-  .setTitle(`📣 Game Snipe - Décompte 📣 [${modRole}]`)
+  .setTitle(`📣 Game Snipe - Décompte 📣`)
   .setDescription(`Démarrage de la game dans une 1 minute`)
   .setFooter(`■■■■■□□□□□ - 50 %`)
 
