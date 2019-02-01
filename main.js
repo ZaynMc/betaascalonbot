@@ -102,7 +102,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
              if(!reaction.message.member.roles.has(roleID)) {
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
-               let user = bot.users.find("username", `${user.username}`);
+               let user = bot.users.find("username", user.username);
                //once you've found the user you can get the id (or you can write .id after the find method)
                let id = user.id;
 
