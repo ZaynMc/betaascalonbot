@@ -110,6 +110,8 @@ bot.on('messageReactionAdd', (reaction, user) => {
                let member = reaction.message.member.guild.members.get(id);
                member.addRole(role);
              }
+
+             
          }
 
           /* if(reaction.emoji.name == "xbox"){
