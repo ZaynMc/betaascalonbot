@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
        ${pc} ${d}
        ${mobile} ${e}
        ${battleroyale} ${f}
-       ${creatig} ${g}
+       ${creatif} ${g}
 
      `
      )
