@@ -177,8 +177,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
                  member6.addRole(role6);
                break;
 
-               case : "🏹":
-
+               case "🏹":
                let role7 = reaction.message.guild.roles.find(r => r.name === "Battle Royale");
                  console.log(`Nope, noppers, nadda.`);
                  let users7 = bot.users.find("username", user.username);
