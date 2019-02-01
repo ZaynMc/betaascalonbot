@@ -193,7 +193,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
           }
         }
 
-        if(reaction.emoji.name == "hammer") {
+        if(reaction.emoji.name == "🔨") {
           console.log('creatif ' + user.username);
           let roleID = "541003784281915392";
           let role = reaction.message.guild.roles.find(r => r.name === "Mode Créatif");
@@ -209,7 +209,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
           }
         }
 
-        if(reaction.emoji.name == "bow_and_arrow") {
+        if(reaction.emoji.name == "🏹") {
           console.log('BATTLEROYALE ' + user.username);
           let roleID = "541004019909525582";
           let role = reaction.message.guild.roles.find(r => r.name === "Battle Royale");
@@ -325,7 +325,7 @@ let role = reaction.message.guild.roles.find(r => r.name === "Mobile");
 
  }
 
- if(reaction.emoji.name == "hammer") {
+ if(reaction.emoji.name == "🔨") {
    console.log('creatif ' + user.username);
    let roleID = "541003784281915392";
    let role = reaction.message.guild.roles.find(r => r.name === "Mode Créatif");
@@ -340,7 +340,7 @@ let role = reaction.message.guild.roles.find(r => r.name === "Mobile");
 
  }
 
- if(reaction.emoji.name == "bow_and_arrow") {
+ if(reaction.emoji.name == "🏹") {
    console.log('BATTLEROYALE ' + user.username);
    let roleID = "541004019909525582";
    let role = reaction.message.guild.roles.find(r => r.name === "Battle Royale");
