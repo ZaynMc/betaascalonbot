@@ -40,9 +40,9 @@ module.exports.run = async (bot, message, args) => {
             ADD_REACTIONS: true
           });
 
-      }catch(err => {
-
-      });
+      } catch(e){
+          console.log(e.stack);
+        }
 
     }).catch(err => {
       console.log(err);
