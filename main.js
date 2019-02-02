@@ -93,14 +93,14 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
        if (user.id !== bot.user.id) {
 
-         ow = message.channel.permissionOverwrites.get("541008951005806605");
+         let ow = reaction.message.channel.permissionOverwrites.get("541008951005806605");
          if(reaction.message.channel.name == "🌀annonce-tournoi-solo" && ow.ADD_REACTIONS === true){
            if(reaction.emoji.name == "✅"){
              console.log('ADD TOURNOI TO ' + user.username);
 
              try{
 
-        roletournoi =  message.guild.createRole({
+        roletournoi =  reaction.message.guild.createRole({
           name: "JOUEUR TOURNOIS",
           color: "#00ff00",
           permissions:[]
@@ -112,7 +112,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
     }
 
-    let roltournoi = message.guild.roles.find(`name`, "JOUEUR TOURNOIS");
+    let roltournoi = reaction.message.guild.roles.find(`name`, "JOUEUR TOURNOIS");
 
     roltournoi.setMentionable(true, 'Role needs to be pinged')
     .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
