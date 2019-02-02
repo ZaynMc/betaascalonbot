@@ -20,10 +20,10 @@ module.exports.run = async (bot, message, args) => {
     message.reply("Choissez l'heure (exemple : 15h60)").then(r => delete(10000));
 
     const filter1 = m => m.author.id == message.author.id;
-    message.channel.awaitMessages(filter1, {max: 1,time:1000})
+    message.channel.awaitMessages(filter1, {max: 1,time:10000})
     .then(collected1 => {
 
-      if(collected.first().content == "cancel") {
+      if(collected1.first().content == "cancel") {
         return message.reply("Canceled");
       }
 
