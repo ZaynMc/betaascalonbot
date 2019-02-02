@@ -121,7 +121,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
     roltournoi.setPosition(4).then(updated => console.log(`Role position: ${updated.position}`))
         .catch(console.error);
 
-             let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOI");
+             let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                let users = bot.users.find("username", user.username);
