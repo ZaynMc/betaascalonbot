@@ -93,6 +93,8 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
        if (user.id !== bot.user.id) {
 
+         
+
          if(reaction.message.channel.name == "📛règlement📛"){
            if(reaction.emoji.name == "✅"){
              console.log('VERIFIED BY ASCALON BOT ' + user.username);
