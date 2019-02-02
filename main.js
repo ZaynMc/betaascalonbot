@@ -105,7 +105,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
              .catch(console.error);
 
              // Set the position of the role
-             role.setPosition(1)
+             role.setPosition(8)
              .then(updated => console.log(`Role position: ${updated.position}`))
              .catch(console.error);
 
