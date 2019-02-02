@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   const filter = m => m.author.id == message.author.id;
   message.reply("Choissez la date (exemple : 01/01/2000)").then(r => delete(10000));
-  message.channel.awaitMessage(filter, {max: 1,time: 10000})
+  await message.channel.awaitMessage(filter, {max: 1,time: 10000})
   .then(collected => {
 
     if(collected.first().content == "cancel") {
@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
     message.reply("Choissez l'heure (exemple : 15h60)").then(r => delete(10000));
 
 const filter1 = m => m.author.id == message.author.id;
-    message.channel.awaitMessage(filter1, {max: 1,time:1000})
+    await message.channel.awaitMessage(filter1, {max: 1,time:1000})
     .then(collected1 => {
 
       if(collected.first().content == "cancel") {
