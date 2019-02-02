@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 
   if(ow.ADD_REACTIONS === true) return;
 
-  onst filter = m => m.author.id == message.author.id;
+  const filter = m => m.author.id == message.author.id;
   message.reply("Choissez la date (exemple : 01/01/2000)").then(r => delete(10000));
   message.channel.awaitMessages(filter, {max: 1,time: 10000})
   .then(collected => {
