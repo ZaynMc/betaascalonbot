@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
         let role = message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
 
       const solotournoi = message.member.guild.channels.find('name', '🌀annonce-tournoi-solo');
-      solotournoi.send(`📣 ANNONCE TOURNOI ${xbox} 📣 [${role}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`).then(msg => {
+      solotournoi.send(`📣 ANNONCE TOURNOI ${role} 📣 [${role}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`).then(msg => {
         msg.react("✅");
       });
 
