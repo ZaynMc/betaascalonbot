@@ -93,7 +93,45 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
        if (user.id !== bot.user.id) {
 
-         
+         ow = message.channel.permissionOverwrites.get("541008951005806605");
+         if(reaction.message.channel.name == "🌀annonce-tournoi-solo" && ow.ADD_REACTIONS === true){
+           if(reaction.emoji.name == "✅"){
+             console.log('ADD TOURNOI TO ' + user.username);
+
+             try{
+
+        roletournoi =  message.guild.createRole({
+          name: "JOUEUR TOURNOIS",
+          color: "#00ff00",
+          permissions:[]
+        })
+
+
+      }catch(e){
+        console.log(e.stack);
+
+    }
+
+    let roltournoi = message.guild.roles.find(`name`, "JOUEUR TOURNOIS");
+
+    roltournoi.setMentionable(true, 'Role needs to be pinged')
+    .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
+    .catch(console.error);
+
+    roltournoi.setPosition(4).then(updated => console.log(`Role position: ${updated.position}`))
+        .catch(console.error);
+
+             let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOI");
+               console.log(`Nope, noppers, nadda.`);
+               //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
+               let users = bot.users.find("username", user.username);
+               //once you've found the user you can get the id (or you can write .id after the find method)
+               let id = users.id;
+               let member = reaction.message.member.guild.members.get(id);
+               member.addRole(role);
+
+           }
+         }
 
          if(reaction.message.channel.name == "📛règlement📛"){
            if(reaction.emoji.name == "✅"){
