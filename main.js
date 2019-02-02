@@ -93,8 +93,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
        if (user.id !== bot.user.id) {
 
-         let ow = reaction.message.channel.permissionOverwrites.get("541008951005806605");
-         if(reaction.message.channel.name == "🌀annonce-tournoi-solo" && ow.ADD_REACTIONS === true){
+         if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
            if(reaction.emoji.name == "✅"){
              console.log('ADD TOURNOI TO ' + user.username);
 
