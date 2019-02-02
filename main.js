@@ -99,26 +99,24 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
              try{
 
-        roletournoi =  reaction.message.guild.createRole({
+        roletournoi = reaction.message.guild.createRole({
           name: "JOUEUR TOURNOIS",
           color: "#00ff00",
           permissions:[]
         })
+
+        roletournoi.setMentionable(true, 'Role needs to be pinged')
+        .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
+        .catch(console.error);
+
+        roletournoi.setPosition(4).then(updated => console.log(`Role position: ${updated.position}`))
+            .catch(console.error);
 
 
       }catch(e){
         console.log(e.stack);
 
     }
-
-    let roltournoi = reaction.message.guild.roles.find(`name`, "JOUEUR TOURNOIS");
-
-    roltournoi.setMentionable(true, 'Role needs to be pinged')
-    .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
-    .catch(console.error);
-
-    roltournoi.setPosition(4).then(updated => console.log(`Role position: ${updated.position}`))
-        .catch(console.error);
 
              let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
                console.log(`Nope, noppers, nadda.`);
