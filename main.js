@@ -96,29 +96,11 @@ bot.on('messageReactionAdd', (reaction, user) => {
          if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
            if(reaction.emoji.name == "✅"){
              console.log('ADD TOURNOI TO ' + user.username);
-
-             try{
-
-        roletournoi = reaction.message.guild.createRole({
-          name: "JOUEUR TOURNOIS",
-          color: "#00ff00",
-          permissions:[]
-        })
-
-        roletournoi.setMentionable(true, 'Role needs to be pinged')
-        .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
-        .catch(console.error);
-
-        roletournoi.setPosition(4).then(updated => console.log(`Role position: ${updated.position}`))
-            .catch(console.error);
-
-
-      }catch(e){
-        console.log(e.stack);
-
-    }
-
              let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
+
+             role.setMentionable(true, 'Role needs to be pinged')
+             .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
+             .catch(console.error);
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
                let users = bot.users.find("username", user.username);
