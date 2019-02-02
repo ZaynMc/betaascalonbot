@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
 
         let heure = collected1.first().content;
 
-        const xbox = client.emojis.find(emoji => emoji.name === "VERIFIED BY ASCALON BOT");
+        const xbox = bot.emojis.find(emoji => emoji.name === "VERIFIED BY ASCALON BOT");
 
       const solotournoi = message.member.guild.channels.find('name', '🌀annonce-tournoi-solo');
       solotournoi.send(`📣 ANNONCE TOURNOI ${xbox} 📣 [${modRole}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`);
