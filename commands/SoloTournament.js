@@ -28,11 +28,10 @@ module.exports.run = async (bot, message, args) => {
       }
 
         let heure = collected1.first().content;
-
-        const xbox = bot.emojis.find(emoji => emoji.name === "VERIFIED BY ASCALON BOT");
+        let role = message.guild.roles.find(r => r.name === "VERIFIED BY ASCALON BOT");
 
       const solotournoi = message.member.guild.channels.find('name', '🌀annonce-tournoi-solo');
-      solotournoi.send(`📣 ANNONCE TOURNOI ${xbox} 📣 [${xbox}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`).then(msg => {
+      solotournoi.send(`📣 ANNONCE TOURNOI ${xbox} 📣 [${role}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`).then(msg => {
         msg.react("✅");
       });
 
