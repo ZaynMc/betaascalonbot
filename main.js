@@ -95,19 +95,28 @@ bot.on('messageReactionAdd', (reaction, user) => {
 
          if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
            if(reaction.emoji.name == "✅"){
+             let users = bot.users.find("username", user.username);
+             if(reaction.count >= 17} return users.send("Le tournoi est complet !");
              console.log('ADD TOURNOI TO ' + user.username);
              let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
 
              role.setMentionable(true, 'Role needs to be pinged')
              .then(updated => console.log(`Role mentionable: ${updated.mentionable}`))
              .catch(console.error);
+
+             // Set the position of the role
+             role.setPosition(1)
+             .then(updated => console.log(`Role position: ${updated.position}`))
+             .catch(console.error);
+
                console.log(`Nope, noppers, nadda.`);
                //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
-               let users = bot.users.find("username", user.username);
                //once you've found the user you can get the id (or you can write .id after the find method)
                let id = users.id;
                let member = reaction.message.member.guild.members.get(id);
                member.addRole(role);
+
+               users.send(`Bonjour ${users} !\n\nVotre inscription au tournoi solo à été bien pris en compte !`);
 
            }
          }
