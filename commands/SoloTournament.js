@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   try{
 
-roletournoi = reaction.message.guild.createRole({
+ message.guild.createRole({
 name: "JOUEUR TOURNOIS",
 color: "#00ff00",
 permissions:[]
