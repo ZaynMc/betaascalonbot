@@ -33,11 +33,11 @@ module.exports.run = async (bot, message, args) => {
 
       const solotournoi = message.member.guild.channels.find('name', '🌀annonce-tournoi-solo');
       solotournoi.send(`📣 ANNONCE TOURNOI ${xbox} 📣 [${xbox}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure}\n \nPour vous inscrirent, réagissez à ce message !`).then(msg => {
-        msg.reac("✅");
+        msg.react("✅");
       });
 
       try {
-        let ascalonall = guild.roles.find(`name`, "VERIFIED BY ASCALON BOT");
+        let ascalonall = message.guild.roles.find(`name`, "VERIFIED BY ASCALON BOT");
 
 
             channel.overwritePermissions(ascalonall, {
