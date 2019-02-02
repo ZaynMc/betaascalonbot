@@ -96,7 +96,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
          if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
            if(reaction.emoji.name == "✅"){
              let users = bot.users.find("username", user.username);
-             if(reaction.count >= 17) return users.send("Le tournoi est complet !");
+             if(reaction.count >= 17) {} return users.send("Le tournoi est complet !");
              console.log('ADD TOURNOI TO ' + user.username);
              let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
 
@@ -222,6 +222,21 @@ bot.on('messageReactionAdd', (reaction, user) => {
    });
 
 bot.on('messageReactionRemove', (reaction, user) => {
+
+  if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
+    if(reaction.emoji.name == "✅"){
+      let users = bot.users.find("username", user.username);
+      console.log('REMOVE TOURNOI TO ' + user.username);
+      let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
+
+        console.log(`Nope, noppers, nadda.`);
+        //user.client.message.guild.member.addRole('540121484690194432').catch(console.error);
+        //once you've found the user you can get the id (or you can write .id after the find method)
+        let id = users.id;
+        let member = reaction.message.member.guild.members.get(id);
+        member.removeRole(role);
+    }
+  }
 
   if(reaction.message.channel.name == "📛règlement📛"){
     if(reaction.emoji.name == "✅"){
