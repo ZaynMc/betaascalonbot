@@ -1,9 +1,14 @@
 const Discord = require("discord.js");
 
-async function go(bot, message,args) {
-  const filter = m => m.author.id == message.author.id;
+module.exports.run = async (bot, message, args) => {
+
+  ow = message.channel.permissionOverwrites.get("541008951005806605");
+
+  if(ow.ADD_REACTIONS === true) return;
+
+  onst filter = m => m.author.id == message.author.id;
   message.reply("Choissez la date (exemple : 01/01/2000)").then(r => delete(10000));
-   message.channel.awaitMessage(filter, {max: 1,time: 10000})
+  message.channel.awaitMessages(filter, {max: 1,time: 10000})
   .then(collected => {
 
     if(collected.first().content == "cancel") {
@@ -14,8 +19,8 @@ async function go(bot, message,args) {
 
     message.reply("Choissez l'heure (exemple : 15h60)").then(r => delete(10000));
 
-const filter1 = m => m.author.id == message.author.id;
-     message.channel.awaitMessage(filter1, {max: 1,time:1000})
+    const filter1 = m => m.author.id == message.author.id;
+    message.channel.awaitMessages(filter1, {max: 1,time:1000})
     .then(collected1 => {
 
       if(collected.first().content == "cancel") {
@@ -48,15 +53,6 @@ const filter1 = m => m.author.id == message.author.id;
   }).catch(err => {
     console.log(err);
   });
-}
-
-module.exports.run = async (bot, message, args) => {
-
-  ow = message.channel.permissionOverwrites.get("541008951005806605");
-
-  go(bot, message, args);
-
-  if(ow.ADD_REACTIONS === true) return;
 
 }
 
