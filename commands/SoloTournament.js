@@ -18,7 +18,7 @@ console.log(e.stack);
 
 }
 
-try {
+  try {
             let channel = bot.channels.find('name', 'SOLO TOURNOI');
             let ascalonall = message.guild.roles.find(`name`, "JOUEUR TOURNOIS");
 

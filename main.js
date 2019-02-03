@@ -96,7 +96,11 @@ bot.on('messageReactionAdd', (reaction, user) => {
          if(reaction.message.channel.name == "🌀annonce-tournoi-solo"){
            if(reaction.emoji.name == "✅"){
              let users = bot.users.find("username", user.username);
-             if(reaction.count >= 17) return users.send("Le tournoi est complet !");
+             if(reaction.count >= 2) { 
+               reaction.remove(user);
+               users.send("Le tournoi est complet !");
+               return;
+             }
              console.log('ADD TOURNOI TO ' + user.username);
              let role = reaction.message.guild.roles.find(r => r.name === "JOUEUR TOURNOIS");
 
