@@ -2,11 +2,11 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
-const snekfetch = require('snekfetch');
+//const snekfetch = require('snekfetch');
 
-require('dotenv');
+//require('dotenv');
 
-
+/*
 const streamer = '';
 
 const api = `https://api.twitch.tv/kraken/streams/${streamer}?client_id=${process.env.twitch_client}`;
@@ -33,7 +33,7 @@ snekfetch.get(api).then(r => {
       return client.channels.get(announcements.id).send({ embed });
     }
   });
-
+*/
 const token = process.env.token;
 
 const size = 12;
