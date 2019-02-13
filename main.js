@@ -88,6 +88,8 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
 
+  bot.user.setGame("Mp for support ! ", 'https://twitter.com/ZaynMC_YT');
+
     console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
 
   //setInterval(changeColor, 1);
