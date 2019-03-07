@@ -2,74 +2,80 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+
 //const snekfetch = require('snekfetch');
 
-//require('dotenv');
-
-/*
-const streamer = '';
-
-const api = `https://api.twitch.tv/kraken/streams/${streamer}?client_id=${process.env.twitch_client}`;
-
-snekfetch.get(api).then(r => {
-    if (r.body.stream === null) {
-      setInterval(() => {
-        snekfetch.get(api).then(console.log(r.body))
-      }, 30000); // Set to 30 seconds, less than this causes 'node socket hang up'
-    } else {
-      const embed = new Discord.RichEmbed()
-        .setAuthor(
-        `${r.body.stream.channel.display_name} is live on Twitch`,
-        `${r.body.stream.channel.logo}`,
-        `${r.body.stream.channel.url}`
-      )
-        .setThumbnail(`http://static-cdn.jtvnw.net/ttv-boxart/${encodeURI(r.body.stream.channel.game)}-500x500.jpg`)
-        .addField('Stream Title', `${r.body.stream.channel.status}`, true)
-        .addField('Playing', `${r.body.stream.channel.game}`, true)
-        .addField('Followers', `${r.body.stream.channel.followers}`, true)
-        .addField('Views', `${r.body.stream.channel.views}`, true)
-        .setImage(r.body.stream.preview.large)
-
-      return client.channels.get(announcements.id).send({ embed });
-    }
-  });
-*/
 const token = process.env.token;
 
-const size = 12;
-const rainbow = new Array(size);
+const CommandReader = require("./menu/CommandReader");
+let CommandReader = new CommandReader();
 
-for (var i=0; i<size; i++) {
-  var red   = sin_to_hex(i, 0 * Math.PI * 2/3); // 0   deg
-  var blue  = sin_to_hex(i, 1 * Math.PI * 2/3); // 120 deg
-  var green = sin_to_hex(i, 2 * Math.PI * 2/3); // 240 deg
+bot.on("ready", () => {
+  console.log("Online.");
+});
 
-  rainbow[i] = '#'+ red + green + blue;
-}
+bot.on("message", (message) => {
+  if(message.author.bot) return;
+  CommandReader.handleCommand(mesage);
+});
 
-function sin_to_hex(i, phase) {
-  var sin = Math.sin(Math.PI / size * 2 * i + phase);
-  var int = Math.floor(sin * 127) + 128;
-  var hex = int.toString(16);
-
-  return hex.length === 1 ? '0'+hex : hex;
-}
-
-let place = 0;
+bot.login(token);
 
 
-function changeColor() {
-  for (let index = 0; index < 1; ++index) {
-    bot.guilds.get("539552660806696988").roles.find('name', "Raimbow").setColor(rainbow[place])
-		.catch(console.error);
-    if(place == (size - 1)){
-      place = 0;
-    }else{
-      place++;
-    }
-  }
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 // Load commands
 bot.commands = new Discord.Collection();
 fs.readdir("./commands/", (err, files) => {
@@ -321,6 +327,4 @@ let role = reaction.message.guild.roles.find(r => r.name === "Mobile");
   }
 
 
-});
-
-  bot.login(token);
+});*/
