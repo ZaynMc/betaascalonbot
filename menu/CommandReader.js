@@ -30,7 +30,7 @@ class CommandReader {
      * @returns [string] - args, extracted from the message.
      */
     static getArgsFromMessage(message) {
-        return message.content.slice(Config.prefix.length).trim().split(/ +/g);
+        return message.content.slice(1).trim().split(/ +/g);
     }
 
 }

@@ -16,7 +16,7 @@ bot.on("ready", () => {
 
 bot.on("message", (message) => {
   if(message.author.bot) return;
-  commandReader.handleCommand(mesage);
+  commandReader.handleCommand(message);
 });
 
 bot.login(token);
