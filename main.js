@@ -7,7 +7,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 const token = process.env.token;
 
-const CommandReader = require("./menu/CommandReader");
+const CommandReader = require("./menu/CommandReader.js");
 let commandReader = new CommandReader();
 
 bot.on("ready", () => {
