@@ -8,7 +8,7 @@ const bot = new Discord.Client({disableEveryone: true});
 const token = process.env.token;
 
 const CommandReader = require("./menu/CommandReader");
-let CommandReader = new CommandReader();
+let commandReader = new CommandReader();
 
 bot.on("ready", () => {
   console.log("Online.");
@@ -16,7 +16,7 @@ bot.on("ready", () => {
 
 bot.on("message", (message) => {
   if(message.author.bot) return;
-  CommandReader.handleCommand(mesage);
+  commandReader.handleCommand(mesage);
 });
 
 bot.login(token);
