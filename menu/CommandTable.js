@@ -2,7 +2,7 @@ const Test = require("./commands/TestCommand.js");
 
 const CommandTable = new Map(
     [
-        ["test", Test.TestCommand],
+        ["a!test", Test.TestCommand],
     ]
 );
 

@@ -1,24 +1,24 @@
-
+//Discord API
 const Discord = require("discord.js");
-const fs = require("fs");
-const bot = new Discord.Client({disableEveryone: true});
+const client = new Discord.Client();
 
-//const snekfetch = require('snekfetch');
+//We just need those modules, CommandReader does all the work.
+const CommandReader = require('./menu/CommandReader');
 
-const token = process.env.token;
-
-const CommandReader = require("./menu/CommandReader.js");
 let commandReader = new CommandReader();
 
-bot.on("ready", () => {
-  console.log("Online.");
+client.on("ready", () => {
+    console.log(`Bot online`);
 });
 
-bot.on("message", (message) => {
-  if(message.author.bot) return;
-  commandReader.handleCommand(message);
+client.on("message", (message) => {
+    //check if the user is a bot before doing anything
+    if (message.author.bot) return;
+    commandReader.handleMessage(message);
 });
 
+
+const token = process.env.token;
 bot.login(token);
 
 
