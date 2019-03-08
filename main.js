@@ -19,7 +19,7 @@ client.on("message", (message) => {
 
 
 const token = process.env.token;
-bot.login(token);
+client.login(token);
 
 
 
