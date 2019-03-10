@@ -5,7 +5,7 @@ module.exports = class TestCommand {
         this.usage = "a!test"
     }
 
-    run(bot, message,args) {
-        message.reply("Proute");
+    run(bot, message, args) {
+        message.reply("✅").then(message => message.delete(1000));
     }
 }

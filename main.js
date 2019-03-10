@@ -5,8 +5,7 @@ const client = new Discord.Client();
 const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
-    alias: ['t'],
-    prefix: ['a!']
+    prefix: ['a!','!']
   });
 
 client.on("ready", () => {
