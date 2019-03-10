@@ -1,3 +1,7 @@
+const Discord = module.require('discord.js');
+var fortnite = require('fortnite');
+var request = require('request');
+
 module.exports = class TestCommand {
     constructor() {
         this.name = "fortnite",
@@ -10,9 +14,12 @@ module.exports = class TestCommand {
         var headers = {
             'TRN-Api-Key': 'ef632672-b4a0-4708-90f0-a7f03176512a'
           }
+
+          let arg = message.content.split(" ").slice(1);
+            let botmessage = arg.join(" ");
         
           var options = {
-            url: `https://api.fortnitetracker.com/v1/profile/` + `${args[0]}` + "/" + `${args[1]}`,
+            url: `https://api.fortnitetracker.com/v1/profile/` + `pc` + "/" + `${botmessage}`,
             method: 'GET',
             headers: headers
           }
