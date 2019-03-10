@@ -23,7 +23,7 @@ client.on("message", (message) => {
   if(!cmd) return;
 
   try{
-      cmd.run(bot,message,args)
+      cmd.run(client,message,args)
   }catch(e){
       console.log(e)
   }
