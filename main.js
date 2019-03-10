@@ -2,29 +2,30 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const { CommandHandle } = require('djs-commands');
-const CH = new CommandHandle({
-  folder: __dirname + "/commands/",
-  prefix: ["a!"]
-});
+const { CommandHandler } = require("djs-commands")
+const CH = new CommandHandler({
+    folder: __dirname + '/commands/',
+    alias: ['t'],
+    prefix: ['a!']
+  });
 
 client.on("ready", () => {
     console.log(`Bot online`);
 });
 
-client.on("message", (message) => {
-  if(message.channel.type == 'dm') return;
-  if(message.author.type == 'bot') return;
+bot.on("message", (message) => {
+  if(message.channel.type === 'dm') return;
+  if(message.author.type === 'bot') return;
   //if(message.author.id !== '184730747079229441') return;
   let args = message.content.split(" ");
   let command = args[0];
   let cmd = CH.getCommand(command);
   if(!cmd) return;
 
-  try {
-    cmd.run(bot, message,args);
-  } catch(e) {
-    console.log(e);
+  try{
+      cmd.run(bot,message,args)
+  }catch(e){
+      console.log(e)
   }
 });
 
