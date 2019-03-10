@@ -6,7 +6,7 @@ module.exports = class TestCommand {
     }
 
     run(bot, message, args) {
-        var get_message = message.channel.send("Generating avatar...");
+        message.channel.send("Generating avatar...");
         let target = message.mentions.users.first() || message.author;
 
      message.channel.send({files: [
@@ -15,8 +15,5 @@ module.exports = class TestCommand {
     name: "avatar.png"
     }
 ]});
-
-get_message.delete();
-
         }
     }
