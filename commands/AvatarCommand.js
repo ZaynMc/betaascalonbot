@@ -10,10 +10,10 @@ module.exports = class TestCommand {
     }
 
     run(bot, message, args) {
-        var get_message = await message.channel.send("Generating avatar...");
+        var get_message =  message.channel.send("Generating avatar...");
         let target = message.mentions.users.first() || message.author;
 
-    await message.channel.send({files: [
+     message.channel.send({files: [
     {
     attachment: target.displayAvatarURL,
     name: "avatar.png"
