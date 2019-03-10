@@ -15,6 +15,7 @@ module.exports = class TestCommand {
             var STAT = new Discord.RichEmbed()
             .setTitle("__***Fortnite Stats***__")
             .setURL(data.info.url)
+            .setThumbnail(message.member.avatarURL)
             .addField("------------------------------------",
                                "Account Username: " + "__**" + data.info.username + "**__" + "\n" +
                                "Account Platform: " + "__**" + data.info.platform + "**__" + "\n" +
