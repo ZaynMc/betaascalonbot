@@ -2,21 +2,31 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-//We just need those modules, CommandReader does all the work.
-const CommandReader = require('./menu/CommandReader');
-
-let commandReader = new CommandReader();
+const { CommandHandle } = require('djs-commands');
+const CH = new CommandHandle({
+  folder: __dirname + "/commands/",
+  prefix: ["a!"]
+});
 
 client.on("ready", () => {
     console.log(`Bot online`);
 });
 
 client.on("message", (message) => {
-    //check if the user is a bot before doing anything
-    if (message.author.bot) return;
-    commandReader.handleMessage(message);
-});
+  if(message.channel.type == 'dm') return;
+  if(message.author.type == 'bot') return;
+  //if(message.author.id !== '184730747079229441') return;
+  let args = message.content.split(" ");
+  let command = args[0];
+  let cmd = CH.getCommand(command);
+  if(!cmd) return;
 
+  try {
+    cmd.run(bot, message,args);
+  } catch(e) {
+    console.log(e);
+  }
+});
 
 const token = process.env.token;
 client.login(token);
