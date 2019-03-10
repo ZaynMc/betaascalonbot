@@ -13,7 +13,7 @@ client.on("ready", () => {
     console.log(`Bot online`);
 });
 
-bot.on("message", (message) => {
+client.on("message", (message) => {
   if(message.channel.type === 'dm') return;
   if(message.author.type === 'bot') return;
   //if(message.author.id !== '184730747079229441') return;
