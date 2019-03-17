@@ -2,7 +2,7 @@ module.exports = class TestCommand {
     constructor() {
         this.name = "clear",
         this.alias = ['clear', 'delete'],
-        this.usage = "a!test"
+        this.usage = "a!clear"
     }
 
     run(bot, message, args) {
@@ -14,7 +14,7 @@ module.exports = class TestCommand {
             } else if(messagecount < 2 ) {
                 message.channel.send(":x: | Désolée, nous ne pouvons supprimer moins de 2 messages.");
               } else {
-                message.channel.fetchMessages({limit: messagecount}).then(messages => msg.channel.bulkDelete(messages, true));
+                message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages, true));
              }  
         }
     }   
