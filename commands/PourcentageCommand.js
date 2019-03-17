@@ -11,9 +11,9 @@ module.exports = class TestCommand {
             return Math.abs(a / b);
           }
 
-        let args0 = parseInt(args[0]);
-        let args1 = parseInt(args[1]);
-        let args2 = parseInt(args[2]);
+        let args0 = parseInt(args[0],10);
+        let args1 = parseInt(args[1],10);
+        let args2 = parseInt(args[2],10);
 
         console.log(difference(args0, args1));
             
