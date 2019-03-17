@@ -11,7 +11,7 @@ module.exports = class TestCommand {
         let args1 = parseInt(args[1]);
         let args2 = parseInt(args[2]);
 
-        message.channel.send("Pourcentage du sondage : \n\n✔️ Pourcentage de oui : " + args0 / args2 + " %");
+        message.channel.send(`Pourcentage du sondage : \n\n✔️ Pourcentage de oui : ${args0 / args1}%`);
             
         }
     }   
