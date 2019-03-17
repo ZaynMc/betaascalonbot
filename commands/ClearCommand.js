@@ -18,5 +18,6 @@ module.exports = class TestCommand {
               }
                 message.channel.fetchMessages({limit: messagecount}).then(messages => message.channel.bulkDelete(messages, true));
             
+                
         }
     }   
