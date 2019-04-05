@@ -1,4 +1,4 @@
-module.exports = class TestCommand {
+module.exports = class ClearCommand {
     constructor() {
         this.name = "clear",
         this.alias = ['clear', 'delete'],

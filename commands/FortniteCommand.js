@@ -1,7 +1,7 @@
 const Discord = module.require('discord.js');
 var fortnite = require('fortnite');
 
-module.exports = class TestCommand {
+module.exports = class FortniteCommand {
     constructor() {
         this.name = "fortnite",
         this.alias = ['stats', 'stat'],
@@ -10,7 +10,9 @@ module.exports = class TestCommand {
 
     run(bot, message, args) {
 
-        fortnite(args[1], args[2] + " " + args[3]).then((data) => {
+        
+
+        /*fortnite(args[1], args[2] + " " + args[3]).then((data) => {
             var STAT = new Discord.RichEmbed()
             .setTitle("__***Fortnite Stats***__")
             .setURL(data.info.url)
@@ -36,6 +38,6 @@ module.exports = class TestCommand {
     
           }).catch(function(err) {
             message.channel.send(err);
-          });
+          });*/
         }
     }

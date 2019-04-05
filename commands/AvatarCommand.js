@@ -1,4 +1,4 @@
-module.exports = class TestCommand {
+module.exports = class AvatarCommand {
     constructor() {
         this.name = "avatar",
         this.alias = ['avatar', 'av'],
@@ -15,5 +15,5 @@ module.exports = class TestCommand {
     name: "avatar.png"
     }
 ]});
-        }
+}
     }
