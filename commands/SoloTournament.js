@@ -39,10 +39,10 @@ module.exports = class SoloTournament {
         let heure = collected1.first().content;
         let date = collected.first().content;
 
-        let role = message.guild.roles.find(r => r.name === "everyone");
+        let role = message.guild.roles.find(r => r.name === "@everyone");
 
         const solotournoi = message.member.guild.channels.find('name', '👑dirigeant');
-      solotournoi.send(`📣 ANNONCE TOURNOI 📣 [${role}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure} \n \nComment s'inscire ? Il suffit juste de réagir avec cette réaction ✅ au message !`).then(msg => {
+      solotournoi.send(`📣 ANNONCE TOURNOI 📣 [${role}]\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : ${date} à ${heure} \n \nComment s'inscire ? Il suffit juste de réagir avec cette réaction ✅ au message !\n \n\n \n Rendez-vous le ${date} à ${heure} dans le channel "📣 Vocal Tournoi"`).then(msg => {
           msg.react("✅");
             });
         });
