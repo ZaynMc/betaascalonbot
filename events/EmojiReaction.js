@@ -26,7 +26,6 @@ module.exports = (client) => {
                         memberObj.addRole(roleObj);
                     } else {
                         memberObj.removeRole(roleObj);
-                        memberO
                     }
                 }
             }
