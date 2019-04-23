@@ -16,6 +16,7 @@
     "ffmpeg-binaries": "^4.0.0",
     "fortnite": "^4.3.2",
     "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.25",
     "ms": "^2.1.1",
     "opusscript": "0.0.6",
     "path": "^0.12.7",
