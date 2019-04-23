@@ -41,8 +41,8 @@ module.exports = class SoloTournament {
 
         let role = message.guild.roles.find(r => r.name === "@everyone");
 
-        const solotournoi = message.member.guild.channels.find('name', '👑dirigeant');
-      solotournoi.send(`📣 ANNONCE TOURNOI 📣 [${role}]\n\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : **${date} à ${heure}** \n \nComment s'inscire ? Il suffit juste de réagir avec cette réaction ✅ au message !\n\nRendez-vous le ${date} à ${heure} dans le channel "📣 Vocal Tournoi"`).then(msg => {
+        const solotournoi = message.member.guild.channels.find('name', '👑dirigeant'); //[${role}]
+      solotournoi.send(`📣 ANNONCE TOURNOI 📣 \n\nMode : **SOLO**\nPlatforme : **TOUS [Pc, Xbox, PS4]**\nDate du tournoi : **${date} à ${heure}** \n \nComment s'inscire ? Il suffit juste de réagir avec cette réaction ✅ au message !\n\nRendez-vous le ${date} à ${heure} dans le channel "📣 Vocal Tournoi"`).then(msg => {
           msg.react("✅");
             });
         });
