@@ -15,7 +15,7 @@ module.exports = (client) => {
       //2 looking for words
       let foundInText = false;
       for (var i in blacklisted) { // loops through the blacklisted list
-        if(message.channel.name == "👍partenariat" ||message.channel.name == "🤝échange-de-pub🤝" || message.channel.name == "👆petite-pub" || message.member.hasPermission("MANAGE_MESSAGES")) return;
+        if(message.channel.name == "👍partenariat" ||message.channel.name == "🤝échange-de-pub🤝" || message.channel.name == "👆petite-pub" || message.channel.name == "⛔modération-staff") return;
         
       
         if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
