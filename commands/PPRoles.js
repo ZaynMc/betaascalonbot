@@ -1,17 +1,15 @@
-module.exports = class HelpCommand {
+module.exports = class ClearCommand {
     constructor() {
         this.name = "pp",
-        this.alias = ['partie', "par"],
-        this.usage = "a!pp"
+        this.alias = ['perso', 'partie'],
+        this.usage = "a!pprole"
     }
 
     run(bot, message, args) {
 
-        let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
         const roles = ["🔑 Notif PP"];
-        const reactions = ["🔑"];
-
-        if (roles.length !== reactions.length) throw "Roles list and reactions list are not the same length!";
+        const reactions = ["🔑", "💬"];
+        let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
         function generateMessages(){
             var messages = [];
@@ -28,6 +26,7 @@ module.exports = class HelpCommand {
                   sent.react(mapObj[1]);  
                 }
             });
+
         }
-    }
-}
+        }
+    }   
