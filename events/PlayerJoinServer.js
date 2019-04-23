@@ -3,7 +3,7 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
-   /* const config = require("../config.json");
+    const config = require("../config.json");
 
     client.on('guildMemberAdd', member => {
 
@@ -25,5 +25,5 @@ module.exports = (client) => {
             .addField('ID', member.user.id, true)
             .setTimestamp(new Date());
         if(member.guild.channels.find((channel) => channel.id === config.channel.log))member.guild.channels.find((channel) => channel.id === config.channel.log).send(log);
-    });*/
+    });
 }

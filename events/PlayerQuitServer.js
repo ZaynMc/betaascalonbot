@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = (client) => {
 
-    /*const config = require("../config.json");
+    const config = require("../config.json");
 
     client.on('guildMemberRemove', member => {
         
@@ -17,6 +17,6 @@ module.exports = (client) => {
         .addField('Création du compte', moment(member.user.createdAt).format('DD/MM/YYYY HH:mm:ss'), true)
         .addField('ID', member.user.id, true)
         .setTimestamp(new Date());
-    if(member.guild.channels.find((channel) => channel.id === config.channel.log))member.guild.channels.find((channel) => channel.id === config.channel.log).send(log);
-    }); */
+    if(member.guild.channels.find((channel) => channel.id === config.channel.log))member.guild.channels.find((channel) => channel.id === config.channel.log).send(log);*/
+    }); 
 }
