@@ -17,6 +17,7 @@
     "fs": "0.0.1-security",
     "ms": "^2.1.1",
     "opusscript": "0.0.6",
+    "path": "^0.12.7",
     "quick.db": "7.0.0-b19",
     "request": "^2.88.0",
     "superagent": "^4.0.0-beta.5",

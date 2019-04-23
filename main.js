@@ -48,8 +48,7 @@ client.on("message", (message) => {
   }
 });
 
-const token = 'NTM5NTU3ODc4MjgxNzk3NjQz.D3kAmw.v2hbgZPRUArwUAfLgCfiQiujNVU';
-client.login(token);
+client.login(process.env.token);
 
 
 
