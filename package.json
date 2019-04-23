@@ -9,6 +9,7 @@
   "author": "ZaynMc",
   "license": "ISC",
   "dependencies": {
+    "canvas": "^2.4.1",
     "discord.js": "^11.4.2",
     "djs-commands": "^1.2.2",
     "ffmpeg": "0.0.4",
