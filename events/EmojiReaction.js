@@ -16,6 +16,7 @@ module.exports = (client) => {
             if (msg.author.id == client.user.id && msg.content != initialMessage){
            
                 var re = `\\*\\*"(.+)?(?="\\*\\*)`;
+                if(re == null) return;
                 var role = msg.content.match(re)[1];
 
                 console.log("role ! " + role);
