@@ -10,7 +10,7 @@ module.exports = (client) => {
         let channel = client.channels.get(reaction.message.channel.id);
         let message = channel.fetchMessage(reaction.message.id).then(msg => {
     
-            if (msg.author.id == client.user.id && msg.content == message){
+            if (msg.author.id == client.user.id && msg.content != message){
                 console.log("BONJOUR");
             }
     
