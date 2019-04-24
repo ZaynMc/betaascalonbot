@@ -24,7 +24,7 @@ client.on("ready", () => {
     let min = time.getMinutes();
     let heur = time.getHours();
 
-    if(min == "02" && heur == "02") {
+    if(min == "01" && heur == "02") {
       //console.log('proute');
       var channel = client.channels.get('518505718517596211'); 
       channel.sendMessage("!shop");
@@ -49,8 +49,3 @@ client.on("message", (message) => {
 });
 
 client.login(process.env.token);
-
-
-
-
-
