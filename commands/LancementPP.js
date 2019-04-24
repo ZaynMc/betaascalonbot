@@ -19,12 +19,6 @@ module.exports = class ClearCommand {
 
         annoncepp.send(`:loudspeaker: [${role}] Lancement Game Partie Personnalisée !\n\n:red_circle: Mode de Jeux : ${args1}\n:key: Code Game : ${args2}\n\n:point_right: Lancement de la Game 1 minute après ce message !`);
 
-        /*annoncepp.send('', {
-            files: [
-                "../bot/images/ligne.png"
-            ]
-        });*/
-
         timer:setTimeout(function(){
             annoncepp.send(`:loudspeaker: [${role}] Lancement de la Game !\n\nBonne chance à tou(te)s`);
             annoncepp.send('', {
@@ -33,11 +27,5 @@ module.exports = class ClearCommand {
                 ]
             });
         }, 60000)
-
-
-       /* const timeoutObj = setTimeout(() => {
-            annoncepp.send(`:loudspeaker: [${role}] Lancement de la Game !\n:\nBonne chance à tou(te)s`);
-            
-          }, 1000);*/
-        }
-    }   
+    }
+}   
