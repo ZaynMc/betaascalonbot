@@ -5,7 +5,7 @@ const moment = require('moment');
 module.exports = (client) => {
 
     client.on("messageReactionAdd", (reaction, user) => {
-        let channel = bot.channels.get(reaction.message.channel.id);
+        let channel = client.channels.get(reaction.message.channel.id);
         console.log("test" + channel);
 
     });
@@ -16,7 +16,7 @@ module.exports = (client) => {
 
     client.on('raw', event => {
         if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
-
+            console.log("test 2");
            
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
