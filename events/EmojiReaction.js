@@ -13,10 +13,9 @@ module.exports = (client) => {
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
             let user = msg.guild.members.get(event.d.user_id);
             
-            if (msg.author.id == client.user.id && msg.content != initialMessage){
+            if (msg.author.id == client.user.id && msg.content == initialMessage){
            
                 var re = `\\*\\*"(.+)?(?="\\*\\*)`;
-                if(re == null) return;
                 var role = msg.content.match(re)[1];
 
                 console.log("role ! " + role);
