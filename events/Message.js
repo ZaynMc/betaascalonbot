@@ -14,9 +14,11 @@ module.exports = (client) => {
         let channel = client.channels.get(reaction.message.channel.id);
         let message = channel.fetchMessage(reaction.message.id).then(msg => {
     
-            if (msg.author.id == client.user.id && msg.content != initmessage){
+            if (msg.author.id == client.user.id){
                
                 if(reaction.message.channel.name == "🛒") {
+
+                    console.log("Proute");
 
                     var roleObj = msg.guild.roles.find(r => r.name === "Notif Boutique");
                     var memberObj = msg.guild.members.get(user.id);
