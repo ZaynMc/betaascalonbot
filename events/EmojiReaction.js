@@ -4,14 +4,6 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
-    client.on("messageReactionAdd", (reaction, user) => {
-        let channel = client.channels.get(reaction.message.channel.id);
-        console.log("test" + channel);
-
-    });
-
-    }
-
     let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
     client.on('raw', event => {
@@ -42,4 +34,4 @@ module.exports = (client) => {
         }  
     });
     
-
+}
