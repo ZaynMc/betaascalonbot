@@ -4,11 +4,22 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
+    let message = `Test`;
+
     client.on('messageReactionAdd', (reaction, user) => {
-        console.log("PROUTEEEE");
+        let channel = client.channels.get(reaction.message.channel.id);
+        let message = channel.fetchMessage(reaction.message.id).then(msg => {
+            let user = msg.guild.members.get(user.id);
+
+            if (msg.author.id == client.user.id && msg.content != message){
+                console.log("BONJOUR");
+            }
+
+        });
 
 
     });
+
     let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
     client.on('raw', event => {
