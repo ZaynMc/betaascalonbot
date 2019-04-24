@@ -4,6 +4,11 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
+    client.on('raw', event => {
+
+
+
+    });
     let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
     client.on('raw', event => {
@@ -18,6 +23,8 @@ module.exports = (client) => {
            
                 var re = `\\*\\*"(.+)?(?="\\*\\*)`;
                 var role = msg.content.match(re)[1];
+
+                console.log("role ! " + role);
            
                 if (user.id != client.user.id){
                     var roleObj = msg.guild.roles.find(r => r.name === role);
