@@ -26,7 +26,7 @@ client.on("ready", () => {
 
     if(min == "02" && heur == "02") {
       //console.log('proute');
-      var channel = client.channels.get('570005816803852299');
+      var channel = client.channels.get('518505718517596211'); 
       channel.sendMessage("!shop");
     }
   }, 60000);

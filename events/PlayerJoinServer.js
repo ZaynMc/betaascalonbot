@@ -16,6 +16,9 @@ module.exports = (client) => {
     
         client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
 
+        let muterole = member.guild.roles.find(`name`, "💧 Ascalon 💧");
+        member.addRole(muterole.id);
+
         //LOG
         let log = new Discord.RichEmbed()
             .setColor(4504882)
