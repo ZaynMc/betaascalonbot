@@ -10,8 +10,12 @@ run(bot, message, args) {
 
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
 
+			let time = new Date();
+			let min = time.getMinutes();
+			let heur = time.getHours();
+
 	const embed = new Discord.RichEmbed()
-	.setTitle("Shutdown Bot")
+	.setTitle("Shutdown Bot at " + heur +":"+ min)
 	.setAuthor("Thibaut Black and Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 
 	.setColor(0x00AE86)
