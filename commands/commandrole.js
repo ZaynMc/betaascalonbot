@@ -6,6 +6,7 @@ module.exports = class AvatarCommand {
         this.alias = ['giverole', 'giverole'],
         this.usage = "a!giverole"
     }
+}
 
 run(bot, message, args) {
 
