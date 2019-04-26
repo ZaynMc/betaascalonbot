@@ -20,15 +20,17 @@ run(bot, message, args) {
 	.setDescription('Shutdown du bot en cours')
 
 	.addField("Shudown Initiateur",message.author.username, true)
-	try {
-		await message.channel.send({embed});
-		await bot.users.get("184730747079229441").send({embed});
-		await bot.users.get("195159794636685313").send({embed});
-	} catch(e) {
-		message.channel.send(`ERROR : ${e.message}`)
+	
+	message.channel.send({embed});
+	bot.users.get("184730747079229441").send({embed});
+	bot.users.get("195159794636685313").send({embed});
+	
+	function myFunc() {
+  		process.exit();
 	}
 
-	//process.exit();
+	setTimeout(myFunc, 3000);
+	
 		
 	    } else {
 	return;
