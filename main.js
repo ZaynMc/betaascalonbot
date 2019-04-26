@@ -2,9 +2,10 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
 const path = require("path");
-const dotenv = require('dotenv');
 
-dotenv.config();
+//const dotenv = require('dotenv');
+
+//dotenv.config();
 
 const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
