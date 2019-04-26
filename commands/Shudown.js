@@ -35,12 +35,12 @@ run(bot, message, args) {
 	    } else {
 	const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
-	.setAuthor("Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
+	.setAuthor("Moi Même", "")
 
 	.setColor(0x00AE86)
-	.setFooter("Créer par Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
-	.setThumbnail("http://media.topito.com/wp-content/uploads/2016/01/heart-eyes-emoji.jpg")
-	.setDescription('Je te connais par toi, retourne d\'où tu viens')
+	.setFooter("Créer null", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
+	.setThumbnail("https://thumbs.gfycat.com/FrightenedMajesticHorseshoecrab-size_restricted.gif")
+	.setDescription('Il a glissé Chef, ce n\'est pas de ma faute')
 
 	message.channel.send({embed});		
 	    }
