@@ -11,7 +11,7 @@ run(bot, message, args) {
 
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
 
-	console.log("test2);
+	console.log("test2");
 	const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Thibaut Black and Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
