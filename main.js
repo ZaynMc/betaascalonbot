@@ -36,7 +36,7 @@ client.on("ready", () => {
 });
 
 client.on("message", (message) => {
-  if(message.channel.type === 'dm') re
+  if(message.channel.type === 'dm') return;
   //if(message.author.type === 'bot') return;
   //if(message.author.id !== '184730747079229441') return;
   let args = message.content.split(" ");
