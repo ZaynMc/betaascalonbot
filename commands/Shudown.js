@@ -30,9 +30,9 @@ run(bot, message, args) {
 	}
 
 	setTimeout(myFunc, 3000);
-
-
+		
 	} else {
+		
         const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
