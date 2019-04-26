@@ -31,7 +31,7 @@ client.on("ready", () => {
     let min = time.getMinutes();
     let heur = time.getHours();
 
-    if(min == "01" && heur == "02") {
+    if(min == "01" && heur == "04") {
       var channel = client.channels.get('518505718517596211'); 
       channel.sendMessage("!shop");
     }
