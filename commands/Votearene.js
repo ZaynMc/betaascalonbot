@@ -9,7 +9,7 @@ module.exports = class ClearCommand {
     run(bot, message, args) {
         message.delete();
 
-        message.channel.send("Choissez votre mode de jeux \n \n __**Arène**__ : ✅ \n \n __**Normal**__ : ❌").then(msg => {
+        message.channel.send("Choissez votre mode de jeux : \n \n __**Arène**__ : ✅ \n __**Normal**__ : ❌").then(msg => {
             msg.react("✅");
             msg.react("❌");
         });
