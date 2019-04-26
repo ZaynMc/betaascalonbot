@@ -7,8 +7,7 @@ module.exports = (client) => {
     let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
     client.on('raw', event => {
-        console.log(event.t);
-        if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
+        if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
            
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
