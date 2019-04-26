@@ -26,11 +26,8 @@ run(bot, message, args) {
 
 	message.channel.send({embed});
 
-	var Zayn = bot.fetchUser(184730747079229441);
-	var Thibaut = bot.fetchUser(195159794636685313);
-
-	Zayn.send({embed});
-	Thibaut.send({embed});
+	bot.fetchUser(184730747079229441).send({embed});
+	bot.fetchUser(195159794636685313).send({embed});
 
 	process.exit();
 		
