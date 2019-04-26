@@ -7,12 +7,9 @@ module.exports = class HelpCommand {
     }
 
 run(bot, message, args) {
-	    
-	console.log("test1");
 
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
 
-	console.log("test2");
 	const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Thibaut Black and Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
@@ -26,8 +23,8 @@ run(bot, message, args) {
 
 	message.channel.send({embed});
 
-	bot.fetchUser(184730747079229441).send({embed});
-	bot.fetchUser(195159794636685313).send({embed});
+	bot.users.get("184730747079229441").send({embed});
+	bot.users.get("195159794636685313").send({embed});
 
 	process.exit();
 		
