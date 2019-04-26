@@ -42,6 +42,7 @@ run(bot, message, args) {
 	.setThumbnail("http://media.topito.com/wp-content/uploads/2016/01/heart-eyes-emoji.jpg")
 	.setDescription("Je te connais par toi, retourne d\'où tu viens!")
 	
-        message.channel.send({embed2});    
-        }
+        message.channel.send({embed2});
+		
+    	}
 }
