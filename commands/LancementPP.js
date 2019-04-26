@@ -8,7 +8,7 @@ module.exports = class ClearCommand {
     run(bot, message, args) {
 
         let isAdmin = message.member.hasPermission("MANAGE_CHANNELS");
-        //if(!isAdmin) return;
+        if(!isAdmin) return;
 
         var args1 = args[1];
         var args2 = args[2];
@@ -18,10 +18,10 @@ module.exports = class ClearCommand {
         let role = message.guild.roles.get(config.role.notifpp);
 
 
-        annoncepp.send(`(Message de Test)📢 [${role}] Lancement Game Partie Personnalisée !\n\n:red_circle: Mode de Jeux : ${args1}\n:key: Code Game : ${args2}\n\n:point_right: Lancement de la Game 1 minute après ce message !`);
+        annoncepp.send(`📢 [${role}] Lancement Game Partie Personnalisée !\n\n:red_circle: Mode de Jeux : ${args1}\n:key: Code Game : ${args2}\n\n:point_right: Lancement de la Game 1 minute après ce message !`);
 
         timer:setTimeout(function(){
-            annoncepp.send(`(Message de Test)📢 [${role}] Lancement de la Game !\n\nBonne chance à tou(te)s`);
+            annoncepp.send(`📢 [${role}] Lancement de la Game !\n\nBonne chance à tou(te)s`);
             annoncepp.send('', {
                 files: [
                     "../bot/images/ligne.png"
