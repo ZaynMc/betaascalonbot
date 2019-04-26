@@ -23,8 +23,8 @@ run(bot, message, args) {
 
 	message.channel.send({embed});
 
-	bot.users.get("184730747079229441").send({embed});
-	bot.users.get("195159794636685313").send({embed});
+	await bot.users.get("184730747079229441").send({embed});
+	await bot.users.get("195159794636685313").send({embed});
 
 	//process.exit();
 		
