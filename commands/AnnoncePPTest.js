@@ -12,6 +12,6 @@ module.exports = class ClearCommand {
         const annoncepp = message.member.guild.channels.find('id', config.channel.ppannonce);
         let role = message.guild.roles.find(r => r.name === config.role.notifpp);
 
-        annoncepp.send(`:loudspeaker: [${role}] Nous allons bientôt lancer des parties personnalisés ! Rejoignez le channel vocal "${config.channel.tournoigeneralvoc}"`);
+        message.channel.send(`:loudspeaker: [${role}] Nous allons bientôt lancer des parties personnalisés ! Rejoignez le channel vocal "${config.channel.tournoigeneralvoc}"`);
         }
     }   
