@@ -1,1 +1,1 @@
-# betaascalonbot
+# Bot Ascalon
