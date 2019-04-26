@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 const dotenv = require('dotenv');
 
+dotenv.config();
+
 const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
@@ -52,4 +54,4 @@ client.on("message", (message) => {
   }
 });
 
-client.login(process.env.TOKEN);
+client.login(${process.env.token});
