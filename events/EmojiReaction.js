@@ -7,12 +7,12 @@ module.exports = (client) => {
     let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
 
     client.on('raw', event => {
-        if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
+      /*  if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
            
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
             let user = msg.guild.members.get(event.d.user_id);
-            
+           
             if (msg.author.id == client.user.id){
 
                 if(msg.content == initialMessage) return;
@@ -35,5 +35,5 @@ module.exports = (client) => {
             })
         }  
     });
-    
+    */
 }
