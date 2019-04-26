@@ -14,26 +14,24 @@ module.exports = class ClearCommand {
             msg.react("👥");
         });
         
-        timer:setTimeout(function(){
-            var react1 = message.reactions.find(reaction => reaction.emoji.name === '🙍').count
-            var react2 = message.reactions.find(reaction => reaction.emoji.name === '👭').count
-            var react3 = message.reactions.find(reaction => reaction.emoji.name === '👥').count
-            if (react1 > react2) {
-                if(react2 > react3) {
-                    message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);   
-                } else {
-                    message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
+            timer:setTimeout(function(){
+                var react1 = message.reactions.find(reaction => reaction.emoji.name === '🙍').count
+                var react2 = message.reactions.find(reaction => reaction.emoji.name === '👭').count
+                var react3 = message.reactions.find(reaction => reaction.emoji.name === '👥').count
+                if (react1 > react2) {
+                    if(react2 > react3) {
+                        message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);   
+                    } else {
+                        message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
+                    }
                 }
-            }
-            if (react2 > react1) {
-                if(react2 > react3) {
-                    message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);    
-                } else {
-                    message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
+                if (react2 > react1) {
+                    if(react2 > react3) {
+                        message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);    
+                    } else {
+                        message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
+                    }
                 }
-            }
-            
-            });
-        }, 60000)
+            }, 60000)
         }
     } 
