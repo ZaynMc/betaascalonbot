@@ -99,7 +99,7 @@ module.exports = class SoloTournament {
                 // .setColor(message && message.guild ? message.guild.me.displayHexColor : '#35c7e4')
                 .setColor('#6302c5')
                 .setTitle(``)
-                .setDescription("")
+                .setDescription("N’oublie pas de mettre dans la Boutique notre Code Créateur :\n **ASCALONCUP")
                 .attachFile(attachment)
                 .setImage('attachment://shop.png')
                // .setFooter("By Zayn");
