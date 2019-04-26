@@ -6,8 +6,7 @@ module.exports = class AvatarCommand {
         this.alias = ['giverole', 'giverole'],
         this.usage = "a!giverole"
     }
-}
-
+    
 run(bot, message, args) {
 
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
@@ -16,5 +15,6 @@ run(bot, message, args) {
         message.author.addRole(role);
         
         //message.channel.fetchMessages("Vous avez bien été ajouter au role ... :)");
-        }
-}	
+        });
+    }
+} 
