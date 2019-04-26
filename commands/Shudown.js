@@ -43,5 +43,5 @@ run(bot, message, args) {
 	.setDescription("Je te connais par toi, retourne d\'où tu viens!")
 	
         message.channel.send({embed2});    
-    }
+        }
 }
