@@ -7,7 +7,7 @@ module.exports = class HelpCommand {
 
 run(bot, message, args) {
 	    
-	console.log("test1);
+	console.log("test1");
 
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
 
