@@ -33,7 +33,7 @@ run(bot, message, args) {
 		
 	} else {
 		
-        const embed = new Discord.RichEmbed()
+        const embed2 = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 
@@ -42,6 +42,6 @@ run(bot, message, args) {
 	.setThumbnail("http://media.topito.com/wp-content/uploads/2016/01/heart-eyes-emoji.jpg")
 	.setDescription("Je te connais par toi, retourne d\'où tu viens!")
 	
-        message.channel.send({embed});    
+        message.channel.send({embed2});    
     }
 }
