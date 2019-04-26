@@ -13,7 +13,7 @@ module.exports = class ClearCommand {
             msg.react("👭");
             msg.react("👥");
         });
-        
+      /*  
             timer:setTimeout(function(){
                 var react1 = message.reactions.find(bot.emoji.equals(':person_with_pouting_face:')).count;
                 var react2 = message.reactions.find(bot.emoji.equals(':two_women_holding_hands:')).count;
@@ -32,6 +32,6 @@ module.exports = class ClearCommand {
                         message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
                     }
                 }
-            }, 10000)
+            }, 10000)*/
         }
     } 
