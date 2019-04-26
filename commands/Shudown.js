@@ -20,22 +20,22 @@ run(bot, message, args) {
 	.setDescription('Shutdown du bot en cours')
 
 	.addField("Shudown Initiateur",message.author.username, true)
-	
+
 	message.channel.send({embed});
 	bot.users.get("184730747079229441").send({embed});
 	bot.users.get("195159794636685313").send({embed});
-	
+
 	function myFunc() {
-  		process.exit();
+		process.exit();
 	}
 
 	setTimeout(myFunc, 3000);
-	
-		
+
+
 	    } else {
 	return;
 	    }
-    } else {
+    	} else {
         const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
