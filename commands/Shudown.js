@@ -33,16 +33,16 @@ run(bot, message, args) {
 		
 	} else {
 		
-        const embed2 = new Discord.RichEmbed()
+	const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
 	.setAuthor("Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 
 	.setColor(0x00AE86)
 	.setFooter("Créer par Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 	.setThumbnail("http://media.topito.com/wp-content/uploads/2016/01/heart-eyes-emoji.jpg")
-	.setDescription("Je te connais par toi, retourne d\'où tu viens!")
-	
-        message.channel.send({embed2});
+	.setDescription('Je te connais par toi, retourne d\'où tu viens')
+
+	message.channel.send({embed});
 		
     	}
 }
