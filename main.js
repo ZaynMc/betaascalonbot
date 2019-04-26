@@ -7,6 +7,9 @@ const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
     prefix: ['a!','!', 'e!','']
+    
+    
+    
   });
 
 
