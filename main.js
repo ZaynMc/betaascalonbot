@@ -32,7 +32,7 @@ client.on("ready", () => {
     let heur = time.getHours();
 
     if(min == "01" && heur == "02") {
-      //console.log('proute');
+      console.log('time is ' + heur + " : " + min);
       var channel = client.channels.get('518505718517596211'); 
       channel.sendMessage("!shop");
     }
