@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+/*const Discord = require("discord.js");
 
 module.exports = class AvatarCommand {
     constructor() {
@@ -8,7 +8,7 @@ module.exports = class AvatarCommand {
     }
     
 run(bot, message, args) {
-/*
+
         if(message.author.id == 195159794636685313 || message.author.id == 184730747079229441) {
         
         let role = message.guild.roles.get("523490575551561729");
@@ -16,5 +16,6 @@ run(bot, message, args) {
         
         //message.channel.fetchMessages("Vous avez bien été ajouter au role ... :)");
         });
-    } */
+    } 
 } 
+*/
