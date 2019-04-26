@@ -10,13 +10,13 @@ module.exports = (client) => {
         //welcome message
         let embed = new Discord.RichEmbed()
         .setColor('#33cc33')
-        .setDescription('Bienvenue' + member.user + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . Have Fun:tada::hugging: !")
+        .setDescription('Bienvenue ' + member.user + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
         member.guild.channels.get(config.channel.welcome).send(embed)
     
         client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
 
-        let muterole = member.guild.roles.find(`name`, "💧 Ascalon 💧");
+        let muterole = member.guild.roles.get(`name`, "💧 Ascalon 💧");
         member.addRole(muterole.id);
 
         //LOG
