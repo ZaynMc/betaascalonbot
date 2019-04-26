@@ -14,10 +14,10 @@ run(bot, message, args) {
 	console.log("test2);
 	const embed = new Discord.RichEmbed()
 	.setTitle("Shutdown Bot")
-	.setAuthor("Thibaut Black", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
+	.setAuthor("Thibaut Black and Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 
 	.setColor(0x00AE86)
-	.setFooter("Créer par Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
+	.setFooter("Créer par Thibaut Black and Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 	.setThumbnail("https://i.imgur.com/3ubvmFE.png")
 	.setDescription('Shutdown du bot en cours')
 
