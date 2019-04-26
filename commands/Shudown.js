@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 module.exports = class HelpCommand {
     constructor() {
-        this.name = "stop",
+        this.name = "shutdown",
         this.alias = [],
         this.usage = ""
     }
