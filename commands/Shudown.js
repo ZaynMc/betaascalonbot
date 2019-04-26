@@ -43,7 +43,7 @@ run(bot, message, args) {
 	.setColor(0x00AE86)
 	.setFooter("Créer par Zayn", "https://media.discordapp.net/attachments/566329831667793920/569607425364066314/unknown.png")
 	.setThumbnail("http://media.topito.com/wp-content/uploads/2016/01/heart-eyes-emoji.jpg")
-	.setDescription("Je te connais par toi, retourne d'où tu viens!")
+	.setDescription("Je te connais par toi, retourne d\'où tu viens!")
 	
         message.channel.send({embed});    
 }
