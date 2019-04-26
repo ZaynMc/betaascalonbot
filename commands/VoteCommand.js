@@ -15,9 +15,9 @@ module.exports = class ClearCommand {
         });
         
             timer:setTimeout(function(){
-                var react1 = message.reactions.find(message.reaction.emoji.name === ':person_with_pouting_face:').count;
-                var react2 = message.reactions.find(message.reaction.emoji.name === ':two_women_holding_hands:').count;
-                var react3 = message.reactions.find(message.reaction.emoji.name === ':busts_in_silhouette:').count;
+                var react1 = message.reactions.find(bot.reaction.emoji.name === ':person_with_pouting_face:').count;
+                var react2 = message.reactions.find(bot.reaction.emoji.name === ':two_women_holding_hands:').count;
+                var react3 = message.reactions.find(bot.reaction.emoji.name === ':busts_in_silhouette:').count;
                 if (react1 > react2) {
                     if(react2 > react3) {
                         message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);   
