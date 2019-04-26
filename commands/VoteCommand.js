@@ -8,10 +8,10 @@ module.exports = class ClearCommand {
     run(bot, message, args) {
         message.delete();
 
-        message.channel.send("Choissez votre mode de jeux \n \n __**Solo**__ : 🙍 \n __**Duo**__ : 👭 \n __**Squad**__ : :family_wwg:").then(msg => {
+        message.channel.send("Choissez votre mode de jeux \n \n __**Solo**__ : 🙍 \n __**Duo**__ : 👭 \n __**Squad**__ : 👥").then(msg => {
             msg.react("🙍");
             msg.react("👭");
-            msg.react(":family_wwg:");
+            msg.react("👥");
         });
         }
     } 
