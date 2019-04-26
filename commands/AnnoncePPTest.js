@@ -1,9 +1,9 @@
     
 module.exports = class ClearCommand {
     constructor() {
-        this.name = "annoncepp2",
-        this.alias = ['anpp2', 'ppannonce2'],
-        this.usage = "a!annoncepp2"
+        this.name = "tttannoncepp",
+        this.alias = ['tttanpp', 'tttppannonce'],
+        this.usage = "ttta!annoncepp"
     }
 
     run(bot, message, args) {
