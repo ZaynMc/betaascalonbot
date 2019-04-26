@@ -26,7 +26,7 @@ run(bot, message, args) {
 	bot.users.get("184730747079229441").send({embed});
 	bot.users.get("195159794636685313").send({embed});
 
-	process.exit();
+	//process.exit();
 		
 	    } else {
 	return;
