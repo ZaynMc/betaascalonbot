@@ -34,6 +34,6 @@ module.exports = class ClearCommand {
             }
             
             });
-        }, 90000)
+        }, 60000)
         }
     } 
