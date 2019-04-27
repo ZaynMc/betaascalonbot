@@ -4,37 +4,39 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
-    let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
+    let MsgPP = `570117479339130881`;
 
     client.on('raw', event => {
-      /*  if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
-           
+        if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
+            
+            let user = msg.guild.members.get(event.d.user_id);
+            if (user.id == client.user.id) return;
+            
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
-            let user = msg.guild.members.get(event.d.user_id);
-           
+            
+
             if (msg.author.id == client.user.id){
 
-                if(msg.content == initialMessage) return;
-           
-                var re = `\\*\\*"(.+)?(?="\\*\\*)`;
-                var role = msg.content.match(re)[1];
-           
-                if (user.id != client.user.id){
-                    var roleObj = msg.guild.roles.find(r => r.name === role);
+                if(msg.id == MsgPP) {
+
+                    //var re = `\\*\\*"(.+)?(?="\\*\\*)`;
+                    //var role = msg.content.match(re)[1];
+                    var roleObj = msg.guild.roles.get(config.role.notifpp);
                     var memberObj = msg.guild.members.get(user.id);
-                   
+
                     if (event.t === "MESSAGE_REACTION_ADD"){
                         memberObj.addRole(roleObj);
                     } else {
                         memberObj.removeRole(roleObj);
                     }
+
                 }
             }
             
             })
         }  
     });
-    */
+    
     });
 }
