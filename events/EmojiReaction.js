@@ -13,7 +13,7 @@ module.exports = (client) => {
             if (user.id == client.user.id) return;
             if (msg.author.id == client.user.id){
                 const config = require("../config.json"); 
-                let MsgPP = config.message.GiveRoles;
+                let MsgPP = config.message.giveroles;
                 console.log("1 = " + msg.id + " || " + MsgPP)
                 if(msg.id == MsgPP) {
                     console.log("2")
