@@ -6,7 +6,7 @@ module.exports = class PlayCommand {
         this.usage = "a!play"
     }
 
-    async run(bot, message, args2,serverQueue) {
+    async run(bot, message, args2, serverQueue) {
     const args = message.content.split(' ');
 
     const voiceChannel = message.member.voiceChannel;
