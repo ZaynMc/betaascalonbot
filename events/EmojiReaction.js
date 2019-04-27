@@ -6,7 +6,6 @@ module.exports = (client) => {
 
     client.on('raw', event => {
         if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
-            console.log("Name Emojy : " + )
             console.log(event.d)
             
             let channel = client.channels.get(event.d.channel_id);
