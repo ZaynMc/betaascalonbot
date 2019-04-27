@@ -46,9 +46,10 @@ client.on("message", async message => {
   let args = message.content.split(" ");
   let command = args[0];
   let cmd = CH.getCommand(command);
-  if(!cmd) return;
+  //if(!cmd) return;
+  console.log("test1");
   if (message.content.startsWith(`a!play`)) {
-	  	console.log("test");
+	  	console.log("test2");
 		execute(message, serverQueue);
 		return;
   } else if (message.content.startsWith(`a!skip`)) {
