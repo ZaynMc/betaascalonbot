@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const moment = require('moment');
+const config = require("../config.json");     
 
 module.exports = (client) => {
 
