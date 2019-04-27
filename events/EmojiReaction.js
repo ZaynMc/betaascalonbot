@@ -15,7 +15,7 @@ module.exports = (client) => {
             if (msg.author.id == client.user.id){
                 const config = require("../config.json"); 
                 let MsgPP = config.message.giveroles;
-                if(msg.id == MsgPP) {
+                //if(msg.id == MsgPP) {
                     var memberObj = msg.guild.members.get(user.id);    
                     if(event.d.emoji.name == "LiguePlatine") {
                        console.log("Emojy detected Ligue Platine")
@@ -37,7 +37,7 @@ module.exports = (client) => {
                         memberObj.removeRole(roleObj);
                     }
 
-                }
+                //}
             }
             
             });
