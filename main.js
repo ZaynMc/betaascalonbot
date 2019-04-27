@@ -49,7 +49,8 @@ client.on("message", (message) => {
   if(!cmd) return;
 
   try{
-      cmd.run(client,message,args,queue)
+      const serverQueue = queue.get(message.guild.id);
+      cmd.run(client,message,args,serverQueue)
   }catch(e){
       console.log(e)
   }
