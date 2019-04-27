@@ -1,4 +1,5 @@
-   module.exports = class PlayCommand {
+const ytdl = require('ytdl-core');   
+module.exports = class PlayCommand {
     constructor() {
         this.name = "Play",
         this.alias = ['play', 'p'],
