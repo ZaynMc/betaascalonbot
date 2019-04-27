@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const moment = require('moment');
-const config = require("../config.json");     
 
 module.exports = (client) => {
 
@@ -21,6 +20,7 @@ module.exports = (client) => {
 
                     //var re = `\\*\\*"(.+)?(?="\\*\\*)`;
                     //var role = msg.content.match(re)[1];
+                    const config = require("../config.json");    
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
                     var memberObj = msg.guild.members.get(user.id);
 
