@@ -6,7 +6,7 @@ module.exports = (client) => {
 
     client.on('raw', event => {
         if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
-            console.log("Name Emojy : " + event.d.emoji.name)
+            console.log("Name Emojy : " + )
             console.log(event.d)
             
             let channel = client.channels.get(event.d.channel_id);
@@ -17,11 +17,17 @@ module.exports = (client) => {
                 const config = require("../config.json"); 
                 let MsgPP = config.message.giveroles;
                 if(msg.id == MsgPP) {
-                var memberObj = msg.guild.members.get(user.id);    
-  /*                  if() {
-                       
-                    } else if () {
-                        
+                    var memberObj = msg.guild.members.get(user.id);    
+                    if(event.d.emoji.name == "LiguePlatine") {
+                       console.log("Emojy detected Ligue Platine")
+                    } else if (event.d.emoji.name == "LigueChallenger") {
+                       console.log("Emojy detected Ligue Challenger")
+                    } else if (event.d.emoji.name == "▶") {
+                       console.log("Emojy detected Arrow")
+                    } else if (event.d.emoji.name == "notif_discord") {
+                       console.log("Emojy detected  Notif Discord")
+                    } else if (event.d.emoji.name == "LigueChallenger") {
+                       console.log("Emojy detected Ligue Challenger")
                     }
                         
                     
