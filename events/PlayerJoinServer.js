@@ -23,7 +23,7 @@ module.exports = (client) => {
         let log = new Discord.RichEmbed()
             .setColor(4504882)
             .setAuthor(member.user.username, member.user.avatarURL)
-            .setDescription(member.toString() + " à rejoint le discord")
+            .setDescription(member + " à rejoint le discord")
             .addField('Création du compte', moment(member.user.createdAt).format('DD/MM/YYYY HH:mm:ss'), true)
             .addField('ID', member.user.id, true)
             .setTimestamp(new Date());
