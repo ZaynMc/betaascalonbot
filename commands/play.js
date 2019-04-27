@@ -1,12 +1,11 @@
-    
-module.exports = class ClearCommand {
+   module.exports = class PlayCommand {
     constructor() {
         this.name = "Play",
         this.alias = ['play', 'p'],
         this.usage = "a!play"
     }
 
-    run(bot, message, args) {
+    async run(bot, message, args) {
     const args = message.content.split(' ');
 
     const voiceChannel = message.member.voiceChannel;
