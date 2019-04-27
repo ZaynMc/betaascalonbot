@@ -11,10 +11,10 @@ module.exports = (client) => {
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
             let user = msg.guild.members.get(event.d.user_id);
             if (user.id == client.user.id) return;
-            console.log("1 = " + msg.author.id + " || " + client.user.id)
             if (msg.author.id == client.user.id){
                 const config = require("../config.json"); 
                 let MsgPP = config.message.GiveRoles;
+                console.log("1 = " + msg.id + " || " + MsgPP)
                 if(msg.id == MsgPP) {
                     console.log("2")
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
