@@ -10,7 +10,7 @@ module.exports = (client) => {
         //welcome message
         let embed = new Discord.RichEmbed()
         .setColor('#33cc33')
-        .setDescription('Bienvenue ' + member.user + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
+        .setDescription('Bienvenue ' + member.user.username + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
         member.guild.channels.get(config.channel.welcome).send(embed)
     
