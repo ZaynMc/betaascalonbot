@@ -28,10 +28,7 @@ module.exports = (client) => {
                     } else if (event.d.emoji.name == "LigueChallenger") {
                        console.log("Emojy detected Ligue Challenger")
                     }
-                        
-                    
-                    */
-                    
+ 
                     
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
                     if (event.t === "MESSAGE_REACTION_ADD"){
