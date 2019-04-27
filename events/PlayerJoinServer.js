@@ -10,7 +10,7 @@ module.exports = (client) => {
         //welcome message
         let embed = new Discord.RichEmbed()
         .setColor('#33cc33')
-        .setDescription('Bienvenue ' + member.nickname + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
+        .setDescription('Bienvenue ' + member.user.username + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     
         client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
@@ -22,7 +22,7 @@ module.exports = (client) => {
         let log = new Discord.RichEmbed()
             .setColor(4504882)
             .setAuthor(member.user.username, member.user.avatarURL)
-            .setDescription(member + " à rejoint le discord")
+            .setDescription(member.user.username + " à rejoint le discord")
             .addField('Création du compte', moment(member.user.createdAt).format('DD/MM/YYYY HH:mm:ss'), true)
             .addField('ID', member.user.id, true)
             .setTimestamp(new Date());
