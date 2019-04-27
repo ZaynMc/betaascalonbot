@@ -48,6 +48,7 @@ client.on("message", async message => {
   let cmd = CH.getCommand(command);
   //if(!cmd) return;
   console.log("test1");
+  const serverQueue = queue.get(message.guild.id);
   if (message.content.startsWith(`a!play`)) {
 	  	console.log("test2");
 		execute(message, serverQueue);
