@@ -13,7 +13,7 @@ module.exports = class ClearCommand {
             msg.react("👭");
             msg.react("👥");
         });
-        
+    /*    
             timer:setTimeout(function(){
                 console.log("0")
                 var react1 = message.reactions.emoji.name;
@@ -40,6 +40,6 @@ module.exports = class ClearCommand {
                         message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
                     }
                 }
-            }, 10000)
+            }, 10000) */
         }
     } 
