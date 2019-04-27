@@ -10,5 +10,10 @@
     "role": {
         "notifpp": "563774563683532801",
         "notifboutique": "Notif Boutique"
-    }
+    },
+    
+    "message": {
+        "GiveRoles": "570117479339130881",
+        "notifboutique": "Notif Boutique"
+    },
 }
