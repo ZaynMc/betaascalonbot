@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const moment = require('moment');
 
 module.exports = (client) => {
-
+    const config = require("../config.json"); 
     let MsgPP = config.message.GiveRoles;
 
     client.on('raw', event => {
@@ -20,7 +20,6 @@ module.exports = (client) => {
 
                     //var re = `\\*\\*"(.+)?(?="\\*\\*)`;
                     //var role = msg.content.match(re)[1];
-                    const config = require("../config.json");    
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
                     var memberObj = msg.guild.members.get(user.id);
 
