@@ -46,7 +46,7 @@ client.on("message", async message => {
   let args = message.content.split(" ");
   let command = args[0];
   let cmd = CH.getCommand(command);
-  if(!cmd) return;
+  //if(!cmd) return;
   if (message.content.startsWith(`/play`)) {
 		execute(message, serverQueue);
 		return;
