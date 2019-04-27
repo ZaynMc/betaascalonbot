@@ -49,7 +49,7 @@ client.on("message", (message) => {
   if(!cmd) return;
 
   try{
-      cmd.run(client,message,args)
+      cmd.run(client,message,args,queue)
   }catch(e){
       console.log(e)
   }
