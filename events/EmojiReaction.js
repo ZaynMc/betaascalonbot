@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const moment = require('moment');
 
 module.exports = (client) => {
-    const config = require("../config.json"); 
-    let MsgPP = config.message.GiveRoles;
 
     client.on('raw', event => {
         if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
@@ -15,8 +13,8 @@ module.exports = (client) => {
             if (user.id == client.user.id) return;
 
             if (msg.author.id == client.user.id){
-
-                if(msg.id == MsgPP) {
+            const config = require("../config.json"); 
+                if(msg.id == config.message.giverole) {
 
                     //var re = `\\*\\*"(.+)?(?="\\*\\*)`;
                     //var role = msg.content.match(re)[1];
