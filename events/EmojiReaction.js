@@ -13,10 +13,9 @@ module.exports = (client) => {
             if (msg.author.id == client.user.id){
                 const config = require("../config.json"); 
                 let MsgPP = config.message.giveroles;
-                //if(msg.id == MsgPP) {
+                if(msg.id == MsgPP) {
                     var memberObj = msg.guild.members.get(user.id);    
                     if(event.d.emoji.name == "LiguePlatine") {
-                       console.log("Emojy detected Ligue Platine")
                         var roleObj = msg.guild.roles.get(config.role.notifboutique2);
                         if (event.t === "MESSAGE_REACTION_ADD"){
                             memberObj.addRole(roleObj);
@@ -24,7 +23,6 @@ module.exports = (client) => {
                             memberObj.removeRole(roleObj);
                         }
                     } else if (event.d.emoji.name == "LigueChallenger") {
-                       console.log("Emojy detected Ligue Challenger")
                         var roleObj = msg.guild.roles.get(config.role.notifsondage);
                         if (event.t === "MESSAGE_REACTION_ADD"){
                             memberObj.addRole(roleObj);
@@ -32,7 +30,6 @@ module.exports = (client) => {
                             memberObj.removeRole(roleObj);
                         }
                     } else if (event.d.emoji.name == "▶") {
-                       console.log("Emojy detected Arrow")
                         var roleObj = msg.guild.roles.get(config.role.notifnews);
                         if (event.t === "MESSAGE_REACTION_ADD"){
                             memberObj.addRole(roleObj);
@@ -40,7 +37,6 @@ module.exports = (client) => {
                             memberObj.removeRole(roleObj);
                         }
                     } else if (event.d.emoji.name == "notif_discord") {
-                       console.log("Emojy detected  Notif Discord")
                         var roleObj = msg.guild.roles.get(config.role.notifpub);
                         if (event.t === "MESSAGE_REACTION_ADD"){
                             memberObj.addRole(roleObj);
@@ -48,7 +44,6 @@ module.exports = (client) => {
                             memberObj.removeRole(roleObj);
                         } 
                     } else if (event.d.emoji.name == "🔑") {
-                       console.log("Emojy detected Clée")
                         var roleObj = msg.guild.roles.get(config.role.notifpp);
                         if (event.t === "MESSAGE_REACTION_ADD"){
                             memberObj.addRole(roleObj);
@@ -56,7 +51,7 @@ module.exports = (client) => {
                             memberObj.removeRole(roleObj);
                         }  
                     }
-                //}
+                }
             }
             
             });
