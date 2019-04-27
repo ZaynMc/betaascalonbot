@@ -6,6 +6,8 @@ module.exports = (client) => {
 
     client.on('raw', event => {
         if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
+            console.log(event.t)
+            coosele.log(event.d)
             
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
@@ -15,9 +17,18 @@ module.exports = (client) => {
                 const config = require("../config.json"); 
                 let MsgPP = config.message.giveroles;
                 if(msg.id == MsgPP) {
+                var memberObj = msg.guild.members.get(user.id);    
+  /*                  if() {
+                       
+                    } else if () {
+                        
+                    }
+                        
+                    
+                    */
+                    
+                    
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
-                    var memberObj = msg.guild.members.get(user.id);
-
                     if (event.t === "MESSAGE_REACTION_ADD"){
                         memberObj.addRole(roleObj);
                     } else {
