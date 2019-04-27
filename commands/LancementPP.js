@@ -24,7 +24,7 @@ module.exports = class ClearCommand {
             annoncepp.send(`📢 [${role}] Lancement de la Game !\n\nBonne chance à tou(te)s`);
             annoncepp.send('', {
                 files: [
-                    "../bot/images/ligne.png"
+                    "../images/ligne.png"
                 ]
             });
         }, 90000)
