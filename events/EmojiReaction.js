@@ -14,18 +14,14 @@ module.exports = (client) => {
             if (msg.author.id == client.user.id){
                 const config = require("../config.json"); 
                 let MsgPP = config.message.giveroles;
-                console.log("1 = " + msg.id + " || " + MsgPP)
                 if(msg.id == MsgPP) {
-                    console.log("2")
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
                     var memberObj = msg.guild.members.get(user.id);
 
                     if (event.t === "MESSAGE_REACTION_ADD"){
                         memberObj.addRole(roleObj);
-                        console.log("3.1")
                     } else {
                         memberObj.removeRole(roleObj);
-                        console.log("3.2")
                     }
 
                 }
