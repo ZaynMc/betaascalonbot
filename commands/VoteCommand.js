@@ -16,7 +16,7 @@ module.exports = class ClearCommand {
         
             timer:setTimeout(function(){
                 console.log("0")
-                var react1 = message.reactions.count;
+                var react1 = message.reactions.emoji.name;
                 console.log("0 ||" + react1)
                 var react2 = message.reactions.find('👭').count;
                 var react3 = message.reactions.find('👥').count;
