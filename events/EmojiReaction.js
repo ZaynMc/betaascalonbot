@@ -4,7 +4,7 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
-    let MsgPP = `570117479339130881`;
+    let MsgPP = config.message.GiveRoles;
 
     client.on('raw', event => {
         if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
