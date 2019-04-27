@@ -13,14 +13,14 @@ module.exports = class ClearCommand {
             msg.react("👭");
             msg.react("👥");
         });
-      /*  
+        
             timer:setTimeout(function(){
-                var react1 = message.reactions.find(bot.emoji.equals(':person_with_pouting_face:')).count;
-                var react2 = message.reactions.find(bot.emoji.equals(':two_women_holding_hands:')).count;
-                var react3 = message.reactions.find(bot.emoji.equals(':busts_in_silhouette:')).count;
+                var react1 = message.reactions.find(bot.emoji.name('🙍')).count;
+                var react2 = message.reactions.find(bot.emoji.name('👭')).count;
+                var react3 = message.reactions.find(bot.emoji.name('👥')).count;
                 if (react1 > react2) {
-                    if(react2 > react3) {
-                        message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 👭`);   
+                    if(react1 > react3) {
+                        message.channel.send(`Le mode de jeux qui a gagné est __**Duo**__ : 🙍`);   
                     } else {
                         message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
                     }
@@ -32,6 +32,6 @@ module.exports = class ClearCommand {
                         message.channel.send(`Le mode de jeux qui a gagné est __**Squad**__ : 👥`);
                     }
                 }
-            }, 10000)*/
+            }, 10000)
         }
     } 
