@@ -39,7 +39,7 @@ client.on("ready", () => {
   }, 60000);
 });
 
-client.on("message", (message) => {
+client.on("message", async message => {
   if(message.channel.type === 'dm') return;
   //if(message.author.type === 'bot') return;
   //if(message.author.id !== '184730747079229441') return;
@@ -47,7 +47,7 @@ client.on("message", (message) => {
   let command = args[0];
   let cmd = CH.getCommand(command);
   if(!cmd) return;
-  if (message.content.startsWith(`$/play`)) {
+  if (message.content.startsWith(`/play`)) {
 		execute(message, serverQueue);
 		return;
   } else if (message.content.startsWith(`/skip`)) {
