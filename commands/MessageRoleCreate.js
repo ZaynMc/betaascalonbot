@@ -9,8 +9,8 @@ module.exports = class ClearCommand {
     run(bot, message, args) {
         message.delete();
 
-        message.channel.send("Choissez votre mode de jeux : \n \n __**Arène**__ : ✅ \n __**Normal**__ : ❌").then(msg => {
-            msg.react("✅");
+        message.channel.send("Roles Menu : Notif \n Mettez une réaction à ce message pour avoir le rôle lié à la réaction \n \n Notif Boutique : <:LiguePlatine:481501980435415040>").then(msg => {
+            msg.react("<:LiguePlatine:481501980435415040>");
             msg.react("❌");
         });
         }
