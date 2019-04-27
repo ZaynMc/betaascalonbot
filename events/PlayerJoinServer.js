@@ -12,6 +12,8 @@ module.exports = (client) => {
         .setColor('#33cc33')
         .setDescription('Bienvenue ' + member + ", avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
+
+        
         member.guild.channels.get(config.channel.welcome).send(embed)
     
         client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
@@ -27,6 +29,13 @@ module.exports = (client) => {
             .addField('Création du compte', moment(member.user.createdAt).format('DD/MM/YYYY HH:mm:ss'), true)
             .addField('ID', member.user.id, true)
             .setTimestamp(new Date());
+        
+        
+        function myFunc() {
+		member.guild.channels.get(config.channel.welcome).send(embed)
         if(member.guild.channels.find((channel) => channel.id === config.channel.log))member.guild.channels.find((channel) => channel.id === config.channel.log).send(log);
-    });
+  
+	    } setTimeout(myFunc, 3000);
+          });
+        
 }
