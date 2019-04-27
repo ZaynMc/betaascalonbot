@@ -25,8 +25,8 @@ module.exports = (client) => {
                        console.log("Emojy detected Arrow")
                     } else if (event.d.emoji.name == "notif_discord") {
                        console.log("Emojy detected  Notif Discord")
-                    } else if (event.d.emoji.name == "LigueChallenger") {
-                       console.log("Emojy detected Ligue Challenger")
+                    } else if (event.d.emoji.name == "🔑") {
+                       console.log("Emojy detected Clée")
                     }
  
                     
