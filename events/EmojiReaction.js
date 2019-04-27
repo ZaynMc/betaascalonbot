@@ -15,9 +15,7 @@ module.exports = (client) => {
             if (msg.author.id == client.user.id){
             const config = require("../config.json"); 
                 if(msg.id == config.message.giverole) {
-
-                    //var re = `\\*\\*"(.+)?(?="\\*\\*)`;
-                    //var role = msg.content.match(re)[1];
+                    
                     var roleObj = msg.guild.roles.get(config.role.notifpp);
                     var memberObj = msg.guild.members.get(user.id);
 
