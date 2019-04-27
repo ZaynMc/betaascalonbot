@@ -47,23 +47,24 @@ client.on("message", (message) => {
   let command = args[0];
   let cmd = CH.getCommand(command);
   if(!cmd) return;
-
+  if (message.content.startsWith(`$/play`)) {
+		execute(message, serverQueue);
+		return;
+  } else if (message.content.startsWith(`/skip`)) {
+		skip(message, serverQueue);
+		return;
+  } else if (message.content.startsWith(`/stop`)) {
+		stop(message, serverQueue);
+		return;
+  }
+	
   try{
       const serverQueue = queue.get(message.guild.id);
       cmd.run(client,message,args,serverQueue,queue)
   }catch(e){
       console.log(e)
   }
-  if (message.content.startsWith(`${prefix}play`)) {
-		execute(message, serverQueue);
-		return;
-  } else if (message.content.startsWith(`${prefix}skip`)) {
-		skip(message, serverQueue);
-		return;
-  } else if (message.content.startsWith(`${prefix}stop`)) {
-		stop(message, serverQueue);
-		return;
-  }
+
 });
 
 async function execute(message, serverQueue) {
