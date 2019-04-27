@@ -27,6 +27,6 @@ module.exports = class ClearCommand {
                     "../bot/images/ligne.png"
                 ]
             });
-        }, 60000)
+        }, 90000)
     }
 }   
