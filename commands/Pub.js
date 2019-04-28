@@ -8,6 +8,10 @@ module.exports = class HelpCommand {
 
     run(bot, message, args) {
 
+        
+        let isAdmin = message.member.hasPermission("MANAGE_CHANNELS");
+        if(!isAdmin) return;
+        
         message.delete();
 
         const embed = new Discord.RichEmbed()
