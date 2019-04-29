@@ -42,6 +42,10 @@ client.on("message", async message => {
   if(message.channel.type === 'dm') return;
   //if(message.author.type === 'bot') return;
   //if(message.author.id !== '184730747079229441') return;
+  if (message.content.startsWith('!abc')) {
+    var str = message.content
+    message.channel.sendMessage(str.substring(5))
+    }
   let args = message.content.split(" ");
   let command = args[0];
   let cmd = CH.getCommand(command);
