@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+const config = require("../config.json");     
+
 const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
     folder: __dirname + '/commands/',
@@ -32,7 +34,7 @@ client.on("ready", () => {
     let heur = time.getHours();
 
     if(min == "01" && heur == "00") {
-      var channel = client.channels.get('518505718517596211'); 
+      var channel = client.channels.get(config.channel.boutique); 
       channel.sendMessage("!shop");
     }
   }, 60000);
