@@ -63,7 +63,7 @@ client.on("message", async message => {
     try {
         cooldown.add(message.author.id);
         con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-          if(err) throw err;
+          if(err) console.log(err);
 
           let sql;
 
