@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const config = require("../config.json");     
+const config = require("./config.json");     
 
 const { CommandHandler } = require("djs-commands")
 const CH = new CommandHandler({
