@@ -1,7 +1,8 @@
-    const fetch = require('node-fetch'),
-    Discord = require('discord.js'),
-    snekfetch = require('snekfetch'),
-    moment = require('moment-timezone');
+const fetch = require('node-fetch'),
+Canvas = require('canvas'),
+Discord = require('discord.js'),
+snekfetch = require('snekfetch'),
+moment = require('moment-timezone');
 
 module.exports = class SoloTournament {
     constructor() {
