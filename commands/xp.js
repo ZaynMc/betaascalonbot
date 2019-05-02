@@ -21,9 +21,9 @@ run(bot, message, args, con) {
 		const exampleEmbed = new Discord.RichEmbed()
 			.setColor('#0099ff')
 			.setTitle('Level de ' + target.username)
-			.setDescription('Xp et level d \'un utilisateur spécifié')
+			.setDescription('XP et level d \'un utilisateur spécifié')
 			.addField('Level de ' + target.username, level, true)
-			.addField('Xp requis pour le level suivant', XpForLevel(level) , true)
+			.addField('XP requis pour le level suivant', XpForLevel(level) , true)
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
 			.setTimestamp()
@@ -59,6 +59,6 @@ function XpForLevel(level) {
 	} else if (level == 9) {
 		return LevelConfig.Xp.lvl10;
 	}else if (level == 10) {
-		return "infinit";
+		return "infini"; //infini sans t
 	}
 };	
