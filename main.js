@@ -82,7 +82,7 @@ client.on("message", async message => {
       })
       setTimeout(() => {
           cooldown.delete(message.author.id)
-          ), cdseconds * 1000)
+      }, cdseconds * 1000)
     }
 
   let args = message.content.split(" ");
