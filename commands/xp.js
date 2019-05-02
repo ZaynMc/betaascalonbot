@@ -21,7 +21,6 @@ run(bot, message, args, con) {
 		const exampleEmbed = new Discord.RichEmbed()
 			.setColor('#0099ff')
 			.setTitle('Level de ' + target.username)
-			.setAuthor('Thibaut Black', null, null)
 			.setDescription('Xp et level d \'un utilisateur spécifié')
 			.addField('Level de ' + target.username, level, true)
 			.addField('Xp requis pour le level suivant', XpForLevel(level) , true)
