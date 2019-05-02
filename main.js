@@ -65,23 +65,24 @@ client.on("message", async message => {
     try {
         cooldown.add(message.author.id);
         con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-          if(err) console.log(err);
-
-          let sql;
-
-          if(rows.length < 1) {
-              sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+          if(err) {
+              console.log(err);
           } else {
-            let xp = rows[0].xp;
-            let level = rows[0].level;
+              let sql;
 
-            xp = xp + generateXP();
+              if(rows.length < 1) {
+                  sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+              } else {
+                let xp = rows[0].xp;
+                let level = rows[0].level;
 
-            sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
+                xp = xp + generateXP();
 
+                sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
+
+              }
+              con.query(sql)
           }
-          con.query(sql)
-
         })
         setTimeout(() => {
             cooldown.delete(message.author.id)
