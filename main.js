@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const db = require('quick.db');
 const shop = require('./CronFile/shop.js');
 let cooldown = new Set();
-let cdseconds = 60;
+let cdseconds = 20;
 
 dotenv.config();
 
