@@ -32,6 +32,8 @@ const CH = new CommandHandler({
 
 client.on("ready", () => {
     console.log(`Bot online`);
+    const Config = require("./config.json");
+    console.log(`Version : ` + Config.version.number);
 
     fs.readdirSync(path.join(__dirname, "events")).forEach(function(file) {
       require('./events/' + file)(client);
