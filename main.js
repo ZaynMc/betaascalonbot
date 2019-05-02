@@ -220,7 +220,7 @@ client.on("message", async message => {
   
 
   var CronJob = require('cron').CronJob;
-  new CronJob('50 0 2 * * *', function() {
+  new CronJob('50 1 2 * * *', function() {
     try{
       shop.shop(client);
     }catch(e){
@@ -309,5 +309,5 @@ client.on("message", async message => {
     }
   };
 
-  client.login("NTcxMjg1OTc4MzY3MzkzNzky.XMgv8A.4hJ4Kki2-BudbU_dqM6EZWig59o");
-//client.login(process.env.TOKEN);
+  //client.login("NTcxMjg1OTc4MzY3MzkzNzky.XMgv8A.4hJ4Kki2-BudbU_dqM6EZWig59o");
+client.login(process.env.TOKEN);
