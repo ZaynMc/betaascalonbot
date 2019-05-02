@@ -6,6 +6,8 @@ const mysql = require("mysql");
 const dotenv = require('dotenv');
 const db = require('quick.db');
 const shop = require('./CronFile/shop.js');
+let cooldown = new Set();
+let cdseconds = 60;
 
 dotenv.config();
 
@@ -57,26 +59,31 @@ function generateXP() {
 client.on("message", async message => {
   if(message.channel.type === 'dm') return;
   if(message.author.bot) return;
+  if (!cooldown.has(message.author.id)) {
+      cooldown.add(message.author.id);
+      con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
+        if(err) throw err;
 
-  con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-    if(err) throw err;
-    
-    let sql;
+        let sql;
 
-    if(rows.length < 1) {
-        sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
-    } else {
-      let xp = rows[0].xp;
-      let level = rows[0].level;
+        if(rows.length < 1) {
+            sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+        } else {
+          let xp = rows[0].xp;
+          let level = rows[0].level;
 
-      xp = xp + generateXP();
+          xp = xp + generateXP();
 
-      sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
-    
+          sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
+
+        }
+        con.query(sql)
+
+      })
+      setTimeout(() => {
+          cooldown.delete(message.author.id)
+          ), cdseconds * 1000)
     }
-    con.query(sql)
-
-  })
 
   let args = message.content.split(" ");
   let command = args[0];
