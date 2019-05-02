@@ -28,6 +28,7 @@ run(bot, message, args, con) {
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
 			.setTimestamp()
+			.setImage("https://tenor.com/view/30rock-great-gif-5754621.gif")
 			.setFooter(target.username, null);
 
 			message.channel.send(exampleEmbed);
