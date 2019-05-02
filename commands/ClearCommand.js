@@ -7,6 +7,11 @@ module.exports = class ClearCommand {
 
     run(bot, message, args) {
 
+        
+        let isAdmin = message.member.hasPermission("MANAGE_CHANNELS");
+        if(!isAdmin) return;
+        
+
         let messagecount = parseInt(args[0]);
 
             if(messagecount > 100){

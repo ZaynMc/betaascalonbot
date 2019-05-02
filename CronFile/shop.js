@@ -1,19 +1,13 @@
-    const fetch = require('node-fetch'),
-    Discord = require('discord.js'),
-    snekfetch = require('snekfetch'),
-    moment = require('moment-timezone');
+const fetch = require('node-fetch'),
+Canvas = require('canvas'),
+Discord = require('discord.js'),
+snekfetch = require('snekfetch'),
+moment = require('moment-timezone');
 
-module.exports = class SoloTournament {
-    constructor() {
-        this.name = "shop",
-        this.alias = ['shopbattleroyale', 'shopfortnite'],
-        this.usage = "a!shop"
-    }
-    run(bot, message, args) {
+function shop(bot) {
 
-        message.delete();
-
-        const config = require("../config.json");
+        const config = require("../config.json");     
+        const message = bot.channels.get(config.channel.shop);
 
         function daTe(d1) {
             const d2 = moment.unix(d1);
@@ -89,9 +83,7 @@ module.exports = class SoloTournament {
 
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'shop.png');
 
-        let role = message.guild.roles.find(r => r.name === config.role.notifboutique);
-
-        
+        let role = message.guild.roles.find('id', config.role.notifboutique2);
 
         const sendEmbed = (channel) => {
             const embed = new Discord.RichEmbed()
@@ -103,13 +95,13 @@ module.exports = class SoloTournament {
                 .setImage('attachment://shop.png')
                // .setFooter("By Zayn");
 
-               channel.send(`[${role}] Boutique Fortnite`);
+            channel.send(`[${role}] Boutique Fortnite`);
             channel.send(embed);
         };
         const lastupdate = res.lastupdate.toString();
         if (message) {
             // message.channel.send(`Shop data for **${res.date}**`, attachment);
-            sendEmbed(message.channel);
+            sendEmbed(message);
         } else {
             const oldShopDate = client.autoCheck.get('shop_latest');
             if (!oldShopDate) {
@@ -129,6 +121,9 @@ module.exports = class SoloTournament {
         }
         
     }).catch(err => console.error(err));
+    return null;
 
-        }
-    }
+}
+module.exports = {  
+    shop: shop
+}

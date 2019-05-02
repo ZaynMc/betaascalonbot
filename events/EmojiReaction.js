@@ -4,36 +4,57 @@ const moment = require('moment');
 
 module.exports = (client) => {
 
-    let initialMessage = `**:bell: __Réction Notification Partie Perso__ :bell:**`;
-
     client.on('raw', event => {
-        if (event.t === 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){
-           
+        if (event.t == 'MESSAGE_REACTION_ADD' || event.t == "MESSAGE_REACTION_REMOVE"){           
             let channel = client.channels.get(event.d.channel_id);
             let message = channel.fetchMessage(event.d.message_id).then(msg=> {
             let user = msg.guild.members.get(event.d.user_id);
-            
+            if (user.id == client.user.id) return;
             if (msg.author.id == client.user.id){
-
-                if(msg.content == initialMessage) return;
-           
-                var re = `\\*\\*"(.+)?(?="\\*\\*)`;
-                var role = msg.content.match(re)[1];
-           
-                if (user.id != client.user.id){
-                    var roleObj = msg.guild.roles.find(r => r.name === role);
-                    var memberObj = msg.guild.members.get(user.id);
-                   
-                    if (event.t === "MESSAGE_REACTION_ADD"){
-                        memberObj.addRole(roleObj);
-                    } else {
-                        memberObj.removeRole(roleObj);
+                const config = require("../config.json"); 
+                let MsgPP = config.message.giveroles;
+                if(msg.id == MsgPP) {
+                    var memberObj = msg.guild.members.get(user.id);    
+                    if(event.d.emoji.name == "LiguePlatine") {
+                        var roleObj = msg.guild.roles.get(config.role.notifboutique2);
+                        if (event.t === "MESSAGE_REACTION_ADD"){
+                            memberObj.addRole(roleObj);
+                        } else {
+                            memberObj.removeRole(roleObj);
+                        }
+                    } else if (event.d.emoji.name == "LigueChallenger") {
+                        var roleObj = msg.guild.roles.get(config.role.notifsondage);
+                        if (event.t === "MESSAGE_REACTION_ADD"){
+                            memberObj.addRole(roleObj);
+                        } else {
+                            memberObj.removeRole(roleObj);
+                        }
+                    } else if (event.d.emoji.name == "▶") {
+                        var roleObj = msg.guild.roles.get(config.role.notifnews);
+                        if (event.t === "MESSAGE_REACTION_ADD"){
+                            memberObj.addRole(roleObj);
+                        } else {
+                            memberObj.removeRole(roleObj);
+                        }
+                    } else if (event.d.emoji.name == "notif_discord") {
+                        var roleObj = msg.guild.roles.get(config.role.notifpub);
+                        if (event.t === "MESSAGE_REACTION_ADD"){
+                            memberObj.addRole(roleObj);
+                        } else {
+                            memberObj.removeRole(roleObj);
+                        } 
+                    } else if (event.d.emoji.name == "🔑") {
+                        var roleObj = msg.guild.roles.get(config.role.notifpp);
+                        if (event.t === "MESSAGE_REACTION_ADD"){
+                            memberObj.addRole(roleObj);
+                        } else {
+                            memberObj.removeRole(roleObj);
+                        }  
                     }
                 }
             }
             
-            })
+            });
         }  
     });
-    
 }
