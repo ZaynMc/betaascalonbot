@@ -1,17 +1,5 @@
 const Discord = require("discord.js");
 
-var subreddits = [
-
-	'https://tenor.com/view/frosted-flakes-tony-the-tiger-they-are-great-cheering-cheer-gif-10910755.gif',
-	'https://tenor.com/view/30rock-great-gif-5754621.gif',
-	'https://tenor.com/view/perfect-10-gif-7911501.gif',
-	'https://tenor.com/view/perfect-sigourney-weaver-amazing-solid-great-gif-4604337.gif',
-	'https://tenor.com/view/great-gif-4402445.gif',
-	'',
-
-	]
-
-
 module.exports = class HelpCommand {
     constructor() {
         this.name = "xp",
@@ -48,7 +36,6 @@ run(bot, message, args, con) {
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
 			.setTimestamp()
-			.setImage(sub)
 			.setFooter(target.username, null);
 
 			message.channel.send(exampleEmbed);
