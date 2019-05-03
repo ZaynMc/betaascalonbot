@@ -10,7 +10,7 @@ module.exports = (client) => {
         //welcome message
         let embed = new Discord.RichEmbed()
         .setColor('#33cc33')
-        .setDescription('Bienvenue __**' + member.user.username + "**__, avant de te divertir sur ASCALON je t'invite à lire le règlement . \n Have Fun:tada::hugging: !")
+        .setDescription('Bienvenue __**' + member.user.username + "**__, avant de te divertir sur ASCALON je t'invite à lire le règlement . \n\n Et n'oublie pas de mettre dans la Boutique Fortnite notre code Créateur : ASCALONCUP \n\n Have Fun:tada::hugging: !")
         .setFooter('Nous sommes désormais ' + member.guild.memberCount)
     
         client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
