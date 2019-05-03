@@ -11,7 +11,10 @@ run(bot, message, args, con) {
 	let target = message.mentions.users.first() || message.guild.members.get(args[1]) || message.author;
 
 	con.query(`SELECT * FROM xp WHERE id = '${target.id}'`, (err , rows) => {
-		if(err) throw err;
+
+          if(err) {
+              console.log(err);
+          } else {
 
 		if(!rows[0]) return message.channel.send("Cette utilisateur a 0 xp");
 
@@ -32,7 +35,7 @@ run(bot, message, args, con) {
 			.setFooter(target.username, null);
 
 			message.channel.send(exampleEmbed);
-
+	  }
 	});
 	}
 }	
