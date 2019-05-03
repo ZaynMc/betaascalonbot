@@ -23,9 +23,7 @@ run(bot, message, args, con) {
 
 		let xp = rows[0].xp;
 		let level = rows[0].level;
-
-		var sub = subreddits[Math.round(Math.random() * (subreddits.length - 1))];
-
+		
 		const exampleEmbed = new Discord.RichEmbed()
 			.setColor('#0099ff')
 			.setTitle('Level de ' + target.username)
