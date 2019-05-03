@@ -26,7 +26,7 @@ run(bot, message, args, con) {
 			.setTitle('Level de ' + target.username)
 			.setDescription('XP et level d \'un utilisateur spécifié')
 			.addField('Level de ' + target.username, level, true)
-			.setthumbnail(target.displayAvatar)
+			.setThumbnail(target.displayAvatarURL)
 			.addField('XP requis pour le level suivant', XpForLevel(level) , true)
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
