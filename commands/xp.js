@@ -23,7 +23,7 @@ run(bot, message, args, con) {
 
 		let xp = rows[0].xp;
 		let level = rows[0].level;
-		
+
 		const exampleEmbed = new Discord.RichEmbed()
 			.setColor('#0099ff')
 			.setTitle('Level de ' + target.username)
@@ -33,6 +33,7 @@ run(bot, message, args, con) {
 			.addField('XP requis pour le level suivant', XpForLevel(level) , true)
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
+			.setImage("https://tenor.com/view/perfect-10-gif-7911501.gif");
 			.setTimestamp()
 			.setFooter(target.username, null);
 
