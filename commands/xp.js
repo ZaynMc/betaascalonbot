@@ -33,7 +33,7 @@ run(bot, message, args, con) {
 			.addField('XP requis pour le level suivant', XpForLevel(level) , true)
 			.addBlankField()
 			.addField('Xp de ' + target.username, xp , true)
-			.setImage("https://tenor.com/view/perfect-10-gif-7911501.gif");
+			.setImage("https://tenor.com/view/perfect-10-gif-7911501.gif")
 			.setTimestamp()
 			.setFooter(target.username, null);
 
