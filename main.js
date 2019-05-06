@@ -66,7 +66,7 @@ client.on("message", async message => {
                 console.log(' Error getting mysql_pool connection: ' + err);
                 throw err;
             }
-            con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
+            connection.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
               if(err) {
                   connection.release();
                   console.log(err);
