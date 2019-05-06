@@ -10,6 +10,10 @@ module.exports = class HelpCommand {
 	
 
 run(bot, message, args, con) {
+	
+        con.connect(err => {
+          if(err) throw err;
+        })
 
 	let target = message.mentions.users.first() || message.guild.members.get(args[1]) || message.author;
 
@@ -38,6 +42,7 @@ run(bot, message, args, con) {
 
 			message.channel.send(exampleEmbed);
 	  }
+	con.release();
 	});
 	}
 }	
