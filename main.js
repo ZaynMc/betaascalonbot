@@ -40,7 +40,7 @@ client.on("ready", () => {
     });
   });
 
-var con = mysql.createPool({
+var mysql_pool = mysql.createPool({
   connectionLimit : 100,
   host: "phpmyadmin.as2pik.ovh",
   user: "Ascalon",
@@ -60,29 +60,33 @@ client.on("message", async message => {
   if (!cooldown.has(message.author.id)) {
     try {
         cooldown.add(message.author.id);
-        con.connect(err => {
-          if(err) throw err;
-        })
-        con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
-          if(err) {
-              con.release();
-              console.log(err);
-          } else {
-              let sql;
-
-              if(rows.length < 1) {
-                  sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+        mysql_pool.getConnection(function(err, connection) {
+            if (err) {
+                connection.release();
+                console.log(' Error getting mysql_pool connection: ' + err);
+                throw err;
+            }
+            con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
+              if(err) {
+                  connection.release();
+                  console.log(err);
               } else {
-                let xp = rows[0].xp;
-                let level = rows[0].level;
+                  let sql;
 
-                xp = xp + generateXP();
+                  if(rows.length < 1) {
+                      sql = `INSERT INTO xp (id, xp) VALUES ('${message.author.id}', ${generateXP()})`
+                  } else {
+                    let xp = rows[0].xp;
+                    let level = rows[0].level;
 
-                sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
+                    xp = xp + generateXP();
 
+                    sql = `UPDATE xp SET xp =${xp}, level =${NewLevel(xp, message, level)} WHERE id = '${message.author.id}'`    
+
+                  }
+                  connection.query(sql)
+                  connection.release();
               }
-              con.query(sql)
-              con.release();
           }
         })
         setTimeout(() => {
@@ -100,7 +104,7 @@ client.on("message", async message => {
   if(!cmd) return;
  
   try{
-      cmd.run(client,message,args, con)
+      cmd.run(client,message,args, mysql_pool)
   }catch(e){
       console.log(e)
   }
