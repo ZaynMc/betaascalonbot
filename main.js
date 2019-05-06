@@ -47,11 +47,6 @@ var con = mysql.createConnection({
   database: "ascalonbot" 
 });
 
-con.connect(err => {
-  if(err) throw err;
-  console.log("Connected to database");
-})
-
 function generateXP() {
   let min = 15;
   let max = 30;
@@ -64,8 +59,12 @@ client.on("message", async message => {
   if (!cooldown.has(message.author.id)) {
     try {
         cooldown.add(message.author.id);
+        con.connect(err => {
+          if(err) throw err;
+        })
         con.query(`SELECT * FROM xp WHERE id = '${message.author.id}'`, (err, rows) => {
           if(err) {
+              con.release();
               console.log(err);
           } else {
               let sql;
@@ -82,6 +81,7 @@ client.on("message", async message => {
 
               }
               con.query(sql)
+              con.release();
           }
         })
         setTimeout(() => {
