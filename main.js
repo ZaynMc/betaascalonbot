@@ -40,7 +40,8 @@ client.on("ready", () => {
     });
   });
 
-var con = mysql.createConnection({
+var con = mysql.createPool({
+  connectionLimit : 100,
   host: "phpmyadmin.as2pik.ovh",
   user: "Ascalon",
   password: "bIxldJxnSF6KaQvv",
