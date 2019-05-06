@@ -86,8 +86,8 @@ client.on("message", async message => {
                   }
                   connection.query(sql)
                   connection.release();
-              })
-          }
+              }
+          })
         })
         setTimeout(() => {
             cooldown.delete(message.author.id)
