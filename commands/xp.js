@@ -47,8 +47,8 @@ run(bot, message, args, mysql_pool) {
 	  }
 	con.release();
 	});
-	}
 	})
+	}
 }	
 
 function XpForLevel(level) {
