@@ -1,4 +1,4 @@
-module.exports = class SoloTournament {
+/*module.exports = class SoloTournament {
     constructor() {
         this.name = "solo",
         this.alias = ['so', 'tournoisolo'],
@@ -9,7 +9,7 @@ module.exports = class SoloTournament {
         //ow = message.channel.permissionOverwrites.get("541008951005806605");
         //if(ow.ADD_REACTIONS === true) return;
 
-       /* message.channel.send('Lancement du processus de tournoi').then(async message => {
+        message.channel.send('Lancement du processus de tournoi').then(async message => {
 
             setTimeout(() => {
                 message.edit("**Préparation du tournoi dans** : ``20 secondes`` • □□□□□□□□□□ - 0%");
@@ -20,7 +20,7 @@ module.exports = class SoloTournament {
             setTimeout(() => {
                 message.edit("**Lancement préparation tournoi** • ■■■■■■■■■■ - 100%");
             }, 200000);
-        });*/
+        });
 
         const filter = m => m.author.id == message.author.id;
   message.reply("Choissez la date (exemple : 01/01/2000)").then(r => delete(10000));
@@ -50,4 +50,4 @@ module.exports = class SoloTournament {
     });
         
     }
-    }
+    }*/
