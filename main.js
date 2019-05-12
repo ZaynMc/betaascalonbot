@@ -305,6 +305,7 @@ client.on("message", async message => {
         message.member.addRole(lvl7);
         message.member.send("Vous venez de passez le level 7");
       }
+        
       return "7";
     } else if (xp > LevelConfig.Xp.lvl08 && xp < LevelConfig.Xp.lvl9) {
       if (level != "8") {
