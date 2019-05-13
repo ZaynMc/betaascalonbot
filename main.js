@@ -26,7 +26,7 @@ const CH = new CommandHandler({
 
   client.on("ready", async () => {
 
-    client.user.setActivity("Faire obéir à mon maître (@ZaynMC_YT)", {type: "STREAMING"});
+    client.user.setActivity("Faire obéir à mon maître (@ZaynMC_YT) || v : " + Config.version.number, {type: "STREAMING"});
 
   });
 
