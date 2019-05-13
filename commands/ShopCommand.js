@@ -90,7 +90,7 @@ module.exports = class SoloTournament {
 
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'shop.png');
 
-        let role = message.guild.roles.find(r => r.name === config.role.notifboutique);
+        let role = message.guild.roles.find('id', config.role.notifboutique2);
 
         
 
