@@ -9,7 +9,14 @@ module.exports = class HelpCommand {
 	
 	
 
-run(bot, message, args, con) {
+run(bot, message, args, mysql_pool) {
+	
+        mysql_pool.getConnection(function(err, con) {
+            if (err) {
+                con.release();
+                console.log(' Error getting mysql_pool connection: ' + err);
+                throw err;
+            }
 
 	let target = message.mentions.users.first() || message.guild.members.get(args[1]) || message.author;
 
@@ -38,7 +45,9 @@ run(bot, message, args, con) {
 
 			message.channel.send(exampleEmbed);
 	  }
+	con.release();
 	});
+	})
 	}
 }	
 
