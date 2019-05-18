@@ -5,7 +5,7 @@ module.exports = (client) => {
 
     const config = require("../config.json");
 
-    /*bot.on("message", async message => {
+    bot.on("message", async message => {
       if(message.channel.type === "dm") return;
     
       // Part 1 : checking & removing the text
@@ -34,6 +34,6 @@ module.exports = (client) => {
     
       }
     
-    });*/
+    });
 
 }
