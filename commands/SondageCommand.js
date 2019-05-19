@@ -20,7 +20,7 @@ module.exports = class HelpCommand {
 
         //📊📆🗓️
 
-        bot.channels.get(config.channel.sondage).sendMessage(`🗓️ **Sondage du Jour** \n__Question__ :\n ${thingToEco}\n\n ${thingToEco}`);
+        bot.channels.get(config.channel.sondage).sendMessage(`🗓️ **Sondage du Jour** \n__Question__ :\n ${thingToEco}\n\n ${thingToEco}\n\n`);
         
         
         message.delete();

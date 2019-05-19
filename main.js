@@ -41,13 +41,13 @@ client.on("ready", () => {
     });
   });
 
-var mysql_pool = mysql.createPool({
+/*var mysql_pool = mysql.createPool({
   connectionLimit : 100,
   host: "phpmyadmin.as2pik.ovh",
   user: "Ascalon",
   password: "bIxldJxnSF6KaQvv",
   database: "ascalonbot" 
-});
+});*/
 
 function generateXP() {
   let min = 15;
