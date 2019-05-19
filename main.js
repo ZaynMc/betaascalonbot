@@ -41,13 +41,15 @@ client.on("ready", () => {
     });
   });
 
-/*var mysql_pool = mysql.createPool({
+  /*
+
+var mysql_pool = mysql.createPool({
   connectionLimit : 100,
   host: "phpmyadmin.as2pik.ovh",
   user: "Ascalon",
   password: "bIxldJxnSF6KaQvv",
   database: "ascalonbot" 
-});*/
+});
 
 function generateXP() {
   let min = 15;
@@ -111,6 +113,7 @@ client.on("message", async message => {
   }
 
 });
+*/
 
 
 client.on("message", async message => {
@@ -250,7 +253,7 @@ client.on("message", async message => {
 
   }, null, true, 'Europe/Paris');
 
-  function NewLevel(xp, message , level) {
+ /* function NewLevel(xp, message , level) {
 
     const LevelConfig = require("./ConfigLevel.json");
 
@@ -329,7 +332,7 @@ client.on("message", async message => {
     } else {
       return "0";
     }
-  };
+  };*/
 
   //client.login("NTcxMjg1OTc4MzY3MzkzNzky.XMgv8A.4hJ4Kki2-BudbU_dqM6EZWig59o");
 client.login(process.env.TOKEN);
