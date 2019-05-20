@@ -344,9 +344,10 @@ client.on("message", async message => {
     //2 looking for words
     let foundInText = false;
     for (var i in blacklisted) { // loops through the blacklisted list
-      if(message.channel.id == "501119402662428673" ||message.channel.name == "482242336164675604" || message.channel.name == "523574006603972608" || message.member.hasPermission("MANAGE_MESSAGES")) return;
+      if(message.channel.id == "501119402662428673" ||message.channel.id == "482242336164675604" || message.channel.id == "523574006603972608" || message.member.hasPermission("MANAGE_MESSAGES")) return;
       
-    
+      console.log(message.channel.id);
+       
       if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
     }
     // checks casesensitive words
