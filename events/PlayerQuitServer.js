@@ -7,7 +7,7 @@ module.exports = (client) => {
     client.on('guildMemberRemove', member => {
         
         //change channel member count 
-        client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
+      //  client.channels.get(config.channel.totalusers).setName(`Total Users : ${member.guild.memberCount}`); // total users
 /*
         //log
         let log = new Discord.RichEmbed()
