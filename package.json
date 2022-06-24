@@ -22,7 +22,7 @@
     "moment-timezone": "^0.5.25",
     "ms": "^2.1.1",
     "mysql": "2.17.1",
-    "node-fetch": "^2.4.1",
+    "node-fetch": "^2.6.7",
     "nodemon": "^1.18.11",
     "opusscript": "0.0.6",
     "path": "^0.12.7",
